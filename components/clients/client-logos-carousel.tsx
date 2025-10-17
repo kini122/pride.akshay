@@ -59,9 +59,9 @@ export function ClientLogosCarousel() {
           {[...logos, ...logos].map((logo, index) => (
             <div
               key={`${logo.id}-${index}`}
-              className="flex-shrink-0 w-40 h-24 flex items-center justify-center bg-gray-100 rounded-lg hover:bg-gray-200 transition-all duration-300 hover:scale-110 cursor-pointer grayscale hover:grayscale-0 p-2"
+              className="flex-shrink-0 w-56 h-36 flex items-center justify-center p-2"
             >
-              <img src={logo.logo} alt={`${logo.name} logo`} className="max-w-full max-h-full object-contain" />
+              <img src={logo.logo} alt={`${logo.name} logo`} className="h-full w-auto object-contain" />
             </div>
           ))}
         </div>
