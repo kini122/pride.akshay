@@ -48,21 +48,25 @@ export function IndustrySectors() {
 
   return (
     <section className="py-20 px-4 bg-white">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-foreground mb-16">Industries We Serve</h2>
+      <div className="max-w-6xl mx-auto text-center">
+        <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Industries We Serve</h2>
+        <p className="text-neutral-500 max-w-2xl mx-auto mb-12">We are proud to be driving a digital revolution across various industry verticals.</p>
 
-        <div ref={containerRef} className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        <div ref={containerRef} className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 items-center">
           {industries.map((industry, index) => (
             <div
               key={industry.id}
               data-industry-id={industry.id}
-              className={`p-6 bg-white border border-border rounded-xl text-center hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer ${
+              className={`flex flex-col items-center gap-4 transition-transform duration-300 ${
                 visibleIndustries.includes(industry.id) ? "animate-fade-in-up" : "opacity-0"
               }`}
               style={{ animationDelay: `${index * 0.05}s` }}
             >
-              <div className="text-4xl mb-3">{industry.icon}</div>
-              <p className="font-semibold text-foreground text-sm">{industry.name}</p>
+              <div className="w-20 h-20 rounded-full bg-[#a6d24a] flex items-center justify-center text-white shadow-sm">
+                {/* icon */}
+                <div className="text-white">{industry.icon}</div>
+              </div>
+              <p className="text-sm font-semibold text-neutral-800 mt-1">{industry.name}</p>
             </div>
           ))}
         </div>
