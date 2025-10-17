@@ -85,21 +85,24 @@ export function FeaturedClientsGrid() {
             <div
               key={client.id}
               data-card-id={client.id}
-              className={`p-8 border border-border rounded-2xl shadow-sm hover:shadow-lg hover:scale-102 transition-all duration-300 ${
+              className={`bg-white p-10 rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 ${
                 visibleCards.includes(client.id) ? "animate-fade-in-up" : "opacity-0"
               }`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Logo */}
-              <div className="client-logo mb-4">
-                <img src={client.logo} alt={`${client.name} logo`} className="w-32 h-auto mx-auto object-contain" />
+              <div className="client-logo mb-6">
+                <img src={client.logo} alt={`${client.name} logo`} className="w-28 h-auto mx-auto object-contain" />
               </div>
 
-              {/* Client Name */}
-              <h3 className="text-2xl font-bold text-foreground mb-3">{client.name}</h3>
+              {/* Content wrapper to constrain text width and align left like reference */}
+              <div className="max-w-[22rem] mx-auto text-left">
+                {/* Client Name */}
+                <h3 className="text-lg font-semibold text-foreground mb-3">{client.name}</h3>
 
-              {/* Description */}
-              <p className="text-muted-foreground leading-relaxed">{client.description}</p>
+                {/* Description */}
+                <p className="text-muted-foreground leading-relaxed text-sm">{client.description}</p>
+              </div>
             </div>
           ))}
         </div>
