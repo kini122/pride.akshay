@@ -77,7 +77,9 @@ export function ClientSuccessStories() {
               }`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="text-5xl mb-4">{study.clientLogo}</div>
+              <div className="client-logo mb-4">
+                <img src={study.clientLogo} alt={`${study.title} logo`} className="w-28 h-auto mx-auto object-contain" />
+              </div>
               <h3 className="text-xl font-bold text-foreground mb-3">{study.title}</h3>
               <p className="text-muted-foreground mb-4">{study.description}</p>
               <div className="pt-4 border-t border-border">
