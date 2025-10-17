@@ -156,7 +156,7 @@ const Carousel = ({ items, initialScroll = 0 }: iCarouselProps) => {
   )
 }
 
-export const TestimonialCard = ({
+const TestimonialCard = ({
   testimonial,
   index,
   layout = false,
