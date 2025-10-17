@@ -91,7 +91,9 @@ export function FeaturedClientsGrid() {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Logo */}
-              <div className="text-5xl mb-4">{client.logo}</div>
+              <div className="client-logo mb-4">
+                <img src={client.logo} alt={`${client.name} logo`} className="w-32 h-auto mx-auto object-contain" />
+              </div>
 
               {/* Client Name */}
               <h3 className="text-2xl font-bold text-foreground mb-3">{client.name}</h3>
