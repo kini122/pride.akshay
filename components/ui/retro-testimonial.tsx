@@ -309,7 +309,7 @@ const TestimonialCard = ({
   )
 }
 
-export const ProfileImage = ({ src, alt, ...rest }: ImageProps) => {
+const ProfileImage = ({ src, alt, ...rest }: ImageProps) => {
   const [isLoading, setLoading] = useState(true)
 
   return (
