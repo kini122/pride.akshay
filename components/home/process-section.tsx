@@ -1,85 +1,58 @@
 "use client"
 
-import { useState } from "react"
-import { ChevronDown } from "lucide-react"
+import { Feature197 } from "@/components/ui/accordion-feature-section"
+import Link from "next/link"
 
-const processSteps = [
+const howWeWork = [
   {
-    number: "01",
-    title: "Brief us in Details",
+    id: 1,
+    title: "01. Initial Consultation",
+    image:
+      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop",
     description:
-      "Share your vision, requirements, and expectations. We listen carefully to understand your unique needs and create a customized plan.",
+      "We begin by understanding your goals, vision, and budget to craft a tailored plan and timeline for your event.",
   },
   {
-    number: "02",
-    title: "Give us a Date of your affair",
+    id: 2,
+    title: "02. Planning & Design",
+    image:
+      "https://images.unsplash.com/photo-1487014679447-9f8336841d58?q=80&w=1200&auto=format&fit=crop",
     description:
-      "Lock in your event date and timeline. We coordinate all logistics and ensure everything is perfectly scheduled for your special day.",
+      "Our team designs the experience—venue, décor, vendors, and schedules—ensuring every detail aligns with your brand and style.",
   },
   {
-    number: "03",
-    title: "Finally, We Bring the Cheer!",
+    id: 3,
+    title: "03. Execution & Coordination",
+    image:
+      "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1200&auto=format&fit=crop",
     description:
-      "Sit back and enjoy! Our team executes flawlessly, bringing your vision to life with creativity, professionalism, and attention to detail.",
+      "On the day, we manage operations end-to-end: setup, logistics, vendor coordination, and guest experience.",
+  },
+  {
+    id: 4,
+    title: "04. Post-Event Services",
+    image:
+      "https://images.unsplash.com/photo-1515169067865-5387ec356754?q=80&w=1200&auto=format&fit=crop",
+    description:
+      "We wrap up with feedback, media delivery, and post-event reporting to measure success and capture memories.",
   },
 ]
 
 export function ProcessSection() {
-  const [expandedIndex, setExpandedIndex] = useState(0)
-
   return (
-    <section className="py-20 px-4 bg-white">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Images */}
-          <div className="grid grid-cols-2 gap-4">
-            <img
-              src="/placeholder.svg?key=process-1"
-              alt="Party scene"
-              className="w-full h-64 object-cover rounded-lg shadow-lg"
-            />
-            <img
-              src="/placeholder.svg?key=process-2"
-              alt="Nightclub"
-              className="w-full h-64 object-cover rounded-lg shadow-lg"
-            />
-          </div>
-
-          {/* Right Column - Accordion */}
-          <div>
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">How we work?</h2>
-
-            <div className="space-y-4">
-              {processSteps.map((step, index) => (
-                <div key={index} className="border border-gray-200 rounded-lg overflow-hidden">
-                  <button
-                    onClick={() => setExpandedIndex(expandedIndex === index ? -1 : index)}
-                    className="w-full px-6 py-4 flex items-center justify-between bg-white hover:bg-gray-50 transition-colors"
-                  >
-                    <div className="flex items-center gap-4">
-                      <span className="text-2xl font-bold text-primary">{step.number}</span>
-                      <span className="text-lg font-semibold text-foreground">{step.title}</span>
-                    </div>
-                    <ChevronDown
-                      className={`w-5 h-5 text-primary transition-transform ${
-                        expandedIndex === index ? "rotate-180" : ""
-                      }`}
-                    />
-                  </button>
-
-                  {expandedIndex === index && (
-                    <div className="px-6 py-4 bg-gray-50 border-t border-gray-200">
-                      <p className="text-gray-600 leading-relaxed">{step.description}</p>
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-
-            <button className="mt-8 px-8 py-3 bg-black text-white rounded-lg font-semibold hover:bg-gray-800 transition-colors">
-              LEARN MORE
-            </button>
-          </div>
+    <section className="bg-white">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground">How we work?</h2>
+        </div>
+        <Feature197 features={howWeWork} />
+        <div className="-mt-6 mb-16 px-4 md:px-0">
+          <Link
+            href="/contact"
+            className="inline-block rounded-md bg-black px-5 py-3 text-white hover:bg-neutral-800 transition-colors"
+          >
+            CONTACT US
+          </Link>
         </div>
       </div>
     </section>
