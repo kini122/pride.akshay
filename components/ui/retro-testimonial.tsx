@@ -49,6 +49,7 @@ const Carousel = ({ items, initialScroll = 0 }: iCarouselProps) => {
   const carouselRef = React.useRef<HTMLDivElement>(null)
   const [canScrollLeft, setCanScrollLeft] = React.useState(false)
   const [canScrollRight, setCanScrollRight] = React.useState(true)
+  const [isHovered, setIsHovered] = React.useState(false)
 
   const checkScrollability = () => {
     if (carouselRef.current) {
@@ -90,12 +91,42 @@ const Carousel = ({ items, initialScroll = 0 }: iCarouselProps) => {
     }
   }, [initialScroll])
 
+  // Auto-scrolling loop: advance scrollLeft continuously, reset to 0 at end. Pause while hovered.
+  React.useEffect(() => {
+    const container = carouselRef.current
+    if (!container) return
+
+    const scrollSpeed = 0.6 // pixels per tick
+    const intervalMs = 20
+
+    const tick = () => {
+      if (!container) return
+      if (isHovered) return
+
+      // advance
+      container.scrollLeft += scrollSpeed
+
+      // loop
+      if (container.scrollLeft >= container.scrollWidth - container.clientWidth - 1) {
+        container.scrollLeft = 0
+      }
+
+      // keep checkScrollability in sync
+      checkScrollability()
+    }
+
+    const id = setInterval(tick, intervalMs)
+    return () => clearInterval(id)
+  }, [isHovered])
+
   return (
     <div className="relative w-full mt-10">
       <div
         className="flex w-full overflow-x-scroll overscroll-x-auto scroll-smooth [scrollbar-width:none] py-5"
         ref={carouselRef}
         onScroll={checkScrollability}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
       >
         <div
           className={cn(
