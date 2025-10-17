@@ -54,20 +54,24 @@ export function StatsIndicators() {
   }, [])
 
   return (
-    <section className="py-20 px-4 bg-orange-50">
+    <section className="py-20 px-4 bg-white">
       <div ref={containerRef} className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-center">
           {stats.map((stat) => (
-            <div
-              key={stat.id}
-              className="text-center p-8 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow"
-            >
-              <div className="text-5xl mb-4">{stat.icon}</div>
-              <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
-                {counts[stat.id] || 0}
-                {stat.label.includes("%") ? "%" : "+"}
+            <div key={stat.id} className="flex items-center gap-6 p-6 rounded-lg border border-transparent hover:border-neutral-200 transition-colors">
+              {/* icon circle */}
+              <div className="flex-shrink-0 w-20 h-20 rounded-full flex items-center justify-center bg-neutral-100 text-neutral-700">
+                <span className="text-2xl">{stat.icon}</span>
               </div>
-              <p className="text-muted-foreground font-medium">{stat.label}</p>
+
+              {/* text */}
+              <div className="text-left">
+                <div className="text-3xl md:text-4xl font-semibold text-neutral-900">
+                  {counts[stat.id] || 0}
+                  {stat.label.includes("%") ? "%" : "+"}
+                </div>
+                <div className="text-neutral-600 mt-1">{stat.label}</div>
+              </div>
             </div>
           ))}
         </div>
