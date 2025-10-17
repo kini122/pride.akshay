@@ -29,6 +29,7 @@ export function Navbar() {
   ]
 
   const isActive = (href: string) => pathname === href
+  const isServicesActive = pathname?.startsWith("/services")
 
   return (
     <nav
@@ -36,76 +37,118 @@ export function Navbar() {
         isScrolled ? "bg-white shadow-lg" : "glass-morphism"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">P</span>
-            </div>
-            <span className="font-bold text-lg text-foreground hidden sm:inline">Pride Eventz</span>
+          <Link href="/" className="flex items-center gap-3 text-[#2D1B1B] hover:opacity-90">
+            <span className="inline-flex h-10 w-10 items-center justify-center rounded-md border-2 border-[#2D1B1B]">
+              <span className="flex flex-col gap-1.5">
+                <span className="block h-0.5 w-5 bg-[#F97316]" />
+                <span className="block h-0.5 w-5 bg-[#F97316]" />
+                <span className="block h-0.5 w-5 bg-[#F97316]" />
+              </span>
+            </span>
+            <span className="hidden sm:inline text-[16px] font-medium tracking-tight">Pride Eventz</span>
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-8">
-            <Link
-              href="/"
-              className={`transition-colors ${isActive("/") ? "text-primary border-b-2 border-primary" : "text-foreground hover:text-primary"}`}
-            >
-              Home
-            </Link>
-            <Link
-              href="/about"
-              className={`transition-colors ${isActive("/about") ? "text-primary border-b-2 border-primary" : "text-foreground hover:text-primary"}`}
-            >
-              About
-            </Link>
+          <nav className="hidden md:flex items-center" aria-label="Primary">
+            <ul className="flex items-center gap-[44px] text-[15px] md:text-[16px] font-medium text-[#2D1B1B]/90">
+              <li>
+                <Link
+                  href="/"
+                  className={`${
+                    isActive("/")
+                      ? "text-[#2D1B1B] border-b-2 border-[#2D1B1B]"
+                      : "hover:text-[#2D1B1B]"
+                  } transition-colors`}
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/about"
+                  className={`${
+                    isActive("/about")
+                      ? "text-[#2D1B1B] border-b-2 border-[#2D1B1B]"
+                      : "hover:text-[#2D1B1B]"
+                  } transition-colors`}
+                >
+                  About
+                </Link>
+              </li>
 
-            {/* Services Dropdown */}
-            <div className="relative group">
-              <button className="flex items-center gap-1 text-foreground hover:text-primary transition-colors">
-                Services
-                <ChevronDown className="w-4 h-4" />
-              </button>
-              <div className="absolute left-0 mt-0 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-2">
-                {services.map((service) => (
-                  <Link
-                    key={service.href}
-                    href={service.href}
-                    className="block px-4 py-2 text-foreground hover:bg-secondary hover:text-primary transition-colors"
-                  >
-                    {service.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
+              {/* Services Dropdown */}
+              <li className="relative group">
+                <div
+                  className={`flex items-center gap-1 transition-colors ${
+                    isServicesActive
+                      ? "text-[#2D1B1B] border-b-2 border-[#2D1B1B]"
+                      : "text-[#2D1B1B]/90 hover:text-[#2D1B1B]"
+                  }`}
+                >
+                  <span>Services</span>
+                  <ChevronDown className="w-4 h-4" />
+                </div>
+                <div className="absolute left-0 mt-2 w-52 rounded-lg border border-[#2D1B1B]/10 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-2 shadow-xl">
+                  {services.map((service) => (
+                    <Link
+                      key={service.href}
+                      href={service.href}
+                      className="block px-4 py-2 text-[#2D1B1B] hover:bg-[#FFF5F7] hover:text-[#F97316] transition-colors"
+                    >
+                      {service.name}
+                    </Link>
+                  ))}
+                </div>
+              </li>
 
-            <Link
-              href="/gallery"
-              className={`transition-colors ${isActive("/gallery") ? "text-primary border-b-2 border-primary" : "text-foreground hover:text-primary"}`}
-            >
-              Portfolio
-            </Link>
-            <Link
-              href="/clients"
-              className={`transition-colors ${isActive("/clients") ? "text-primary border-b-2 border-primary" : "text-foreground hover:text-primary"}`}
-            >
-              Our Clients
-            </Link>
-            <Link
-              href="/contact"
-              className={`transition-colors ${isActive("/contact") ? "text-primary border-b-2 border-primary" : "text-foreground hover:text-primary"}`}
-            >
-              Contact
-            </Link>
-          </div>
+              <li>
+                <Link
+                  href="/gallery"
+                  className={`${
+                    isActive("/gallery")
+                      ? "text-[#2D1B1B] border-b-2 border-[#2D1B1B]"
+                      : "hover:text-[#2D1B1B]"
+                  } transition-colors`}
+                >
+                  Portfolio
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/clients"
+                  className={`${
+                    isActive("/clients")
+                      ? "text-[#2D1B1B] border-b-2 border-[#2D1B1B]"
+                      : "hover:text-[#2D1B1B]"
+                  } transition-colors`}
+                >
+                  Our Clients
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className={`${
+                    isActive("/contact")
+                      ? "text-[#2D1B1B] border-b-2 border-[#2D1B1B]"
+                      : "hover:text-[#2D1B1B]"
+                  } transition-colors`}
+                >
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </nav>
 
           {/* CTA Button */}
           <Link
             href="/contact"
-            className="hidden sm:inline-block px-6 py-2 bg-primary text-white rounded-lg hover:bg-accent transition-colors"
+            className="hidden sm:inline-block rounded-lg border-2 border-[#2D1B1B] px-8 py-3 text-[15px] font-medium text-[#2D1B1B] transition-colors hover:bg-[#FFF5F7]"
           >
-            Plan Event
+            Let&apos;s work together
           </Link>
 
           {/* Mobile Menu Button */}
@@ -117,15 +160,15 @@ export function Navbar() {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden pb-4 border-t border-border">
-            <Link href="/" className="block px-4 py-2 text-foreground hover:text-primary">
+            <Link href="/" className="block px-4 py-2 text-[#2D1B1B]/90 hover:text-[#2D1B1B]">
               Home
             </Link>
-            <Link href="/about" className="block px-4 py-2 text-foreground hover:text-primary">
+            <Link href="/about" className="block px-4 py-2 text-[#2D1B1B]/90 hover:text-[#2D1B1B]">
               About
             </Link>
             <button
               onClick={() => setIsServicesOpen(!isServicesOpen)}
-              className="w-full text-left px-4 py-2 text-foreground hover:text-primary flex items-center justify-between"
+              className="w-full text-left px-4 py-2 text-[#2D1B1B]/90 hover:text-[#2D1B1B] flex items-center justify-between"
             >
               Services
               <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? "rotate-180" : ""}`} />
@@ -136,20 +179,20 @@ export function Navbar() {
                   <Link
                     key={service.href}
                     href={service.href}
-                    className="block px-4 py-2 text-sm text-foreground hover:text-primary"
+                    className="block px-4 py-2 text-sm text-[#2D1B1B]/90 hover:text-[#2D1B1B]"
                   >
                     {service.name}
                   </Link>
                 ))}
               </div>
             )}
-            <Link href="/gallery" className="block px-4 py-2 text-foreground hover:text-primary">
+            <Link href="/gallery" className="block px-4 py-2 text-[#2D1B1B]/90 hover:text-[#2D1B1B]">
               Portfolio
             </Link>
-            <Link href="/clients" className="block px-4 py-2 text-foreground hover:text-primary">
+            <Link href="/clients" className="block px-4 py-2 text-[#2D1B1B]/90 hover:text-[#2D1B1B]">
               Our Clients
             </Link>
-            <Link href="/contact" className="block px-4 py-2 text-foreground hover:text-primary">
+            <Link href="/contact" className="block px-4 py-2 text-[#2D1B1B]/90 hover:text-[#2D1B1B]">
               Contact
             </Link>
           </div>

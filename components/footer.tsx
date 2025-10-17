@@ -1,65 +1,63 @@
 import Link from "next/link"
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react"
+import { Facebook, Instagram, Youtube, Phone, Mail, ArrowUp } from "lucide-react"
 
 export function Footer() {
   return (
-    <footer className="bg-white border-t border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* Four Column Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-          {/* Column 1 - Logo & Description */}
+    <footer className="bg-[#F9FAFB]">
+      <div className="mx-auto max-w-[1300px] px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-[70px] mb-8">
+          {/* Column 1 - Company Info */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold">P</span>
-              </div>
-              <span className="font-bold text-lg text-foreground">Pride Eventz</span>
+            <div className="flex items-center gap-3">
+              <span className="inline-flex h-10 w-10 items-center justify-center rounded-md border-2 border-[#2D1B1B]">
+                <span className="flex flex-col gap-1.5">
+                  <span className="block h-0.5 w-5 bg-[#F97316]" />
+                  <span className="block h-0.5 w-5 bg-[#F97316]" />
+                  <span className="block h-0.5 w-5 bg-[#F97316]" />
+                </span>
+              </span>
+              <span className="font-semibold text-lg text-[#1F1F1F]">Pride Eventz</span>
             </div>
-            <p className="text-gray-600 mb-6">Creating unforgettable moments and resonating experiences since 2010.</p>
-            {/* Social Media Icons */}
-            <div className="flex gap-4">
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors">
-                <Instagram className="w-5 h-5" />
+            <p className="text-[#6B7280] mt-4 max-w-[280px] text-[14px] leading-[1.6]">
+              We specialize in creating customized solutions that align with your vision and budget
+            </p>
+            <div className="mt-4 space-y-2 text-[14px]">
+              <a href="tel:+919846596349" className="inline-flex items-center gap-2 text-[#6B7280] hover:text-[#F97316] transition-colors">
+                <Phone className="w-4 h-4" /> Tel no.: +91 9846596349
               </a>
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors">
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors">
-                <Facebook className="w-5 h-5" />
+              <a href="mailto:info@prideeventz.in" className="inline-flex items-center gap-2 text-[#6B7280] hover:text-[#F97316] transition-colors">
+                <Mail className="w-4 h-4" /> Email: info@prideeventz.in
               </a>
             </div>
           </div>
 
-          {/* Column 2 - Company Links */}
+          {/* Column 2 - Company */}
           <div>
-            <h3 className="font-bold text-foreground mb-6">Company</h3>
-            <ul className="space-y-3">
+            <h3 className="font-semibold text-[#1F1F1F] mb-4 text-[16px]">Company</h3>
+            <ul className="space-y-2 text-[14px]">
               <li>
-                <Link href="/about" className="text-gray-600 hover:text-primary transition-colors">
+                <Link href="/about" className="text-[#6B7280] hover:text-[#F97316] transition-colors">
                   About
                 </Link>
               </li>
               <li>
-                <Link href="/services/corporate" className="text-gray-600 hover:text-primary transition-colors">
+                <Link href="/services/corporate" className="text-[#6B7280] hover:text-[#F97316] transition-colors">
                   Services
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-gray-600 hover:text-primary transition-colors">
-                  Contact Us
+                <Link href="/gallery" className="text-[#6B7280] hover:text-[#F97316] transition-colors">
+                  Portfolio
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-600 hover:text-primary transition-colors">
-                  Career
+                <Link href="/clients" className="text-[#6B7280] hover:text-[#F97316] transition-colors">
+                  Our Clients
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-600 hover:text-primary transition-colors">
-                  Blog
+                <Link href="/contact" className="text-[#6B7280] hover:text-[#F97316] transition-colors">
+                  Contact
                 </Link>
               </li>
             </ul>
@@ -67,60 +65,57 @@ export function Footer() {
 
           {/* Column 3 - Social Media */}
           <div>
-            <h3 className="font-bold text-foreground mb-6">Social Media</h3>
-            <ul className="space-y-3">
+            <h3 className="font-semibold text-[#1F1F1F] mb-4 text-[16px]">Social Media</h3>
+            <ul className="space-y-2 text-[14px]">
               <li>
-                <a href="#" className="text-gray-600 hover:text-primary transition-colors">
-                  Instagram
+                <a href="#" className="inline-flex items-center gap-2 text-[#6B7280] hover:text-[#FF1493] transition-colors">
+                  <Facebook className="w-4 h-4" /> Facebook
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-primary transition-colors">
-                  LinkedIn
+                <a href="#" className="inline-flex items-center gap-2 text-[#6B7280] hover:text-[#FF1493] transition-colors">
+                  <Youtube className="w-4 h-4" /> Youtube
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-primary transition-colors">
-                  Twitter
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 hover:text-primary transition-colors">
-                  Facebook
+                <a href="#" className="inline-flex items-center gap-2 text-[#6B7280] hover:text-[#FF1493] transition-colors">
+                  <Instagram className="w-4 h-4" /> Instagram
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Column 4 - Contact Info */}
+          {/* Column 4 - Legal & Press */}
           <div>
-            <h3 className="font-bold text-foreground mb-6">Need Help?</h3>
-            <div className="space-y-4">
-              <div>
-                <p className="text-sm text-gray-500 mb-1">Phone</p>
-                <a
-                  href="tel:+919876543210"
-                  className="text-gray-600 hover:text-primary transition-colors font-semibold"
-                >
-                  +91 98765 43210
-                </a>
-              </div>
-              <div>
-                <p className="text-sm text-gray-500 mb-1">Email</p>
-                <a
-                  href="mailto:info@prideeventz.com"
-                  className="text-gray-600 hover:text-primary transition-colors font-semibold"
-                >
-                  info@prideeventz.com
-                </a>
-              </div>
-            </div>
+            <h3 className="font-semibold text-[#1F1F1F] mb-4 text-[16px]">Legal &amp; Press</h3>
+            <ul className="space-y-2 text-[14px]">
+              <li>
+                <Link href="#" className="text-[#6B7280] hover:text-[#F97316] transition-colors">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="text-[#6B7280] hover:text-[#F97316] transition-colors">
+                  Terms &amp; Conditions
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-200 pt-8">
-          <p className="text-center text-gray-600 text-sm">© Pride Eventz 2025 | All rights reserved</p>
+        <div className="border-t border-[#E5E7EB] pt-6">
+          <div className="flex items-center justify-between text-[14px] text-[#6B7280]">
+            <span>© Pride Eventz 2025</span>
+            <span>Kochi, Kerala</span>
+            <a
+              href="#"
+              aria-label="Back to top"
+              className="inline-flex items-center justify-center h-8 w-8 rounded-full border border-[#D1D5DB] text-[#6B7280] transition-transform hover:-translate-y-0.5"
+            >
+              <ArrowUp className="h-4 w-4" />
+            </a>
+          </div>
         </div>
       </div>
     </footer>

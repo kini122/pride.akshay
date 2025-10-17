@@ -123,6 +123,9 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     @apply bg-background text-foreground;
   }
@@ -231,6 +234,15 @@
     animation: countUp 0.6s ease-out;
   }
 
+  @keyframes accordion-down {
+    from { height: 0; }
+    to { height: var(--radix-accordion-content-height); }
+  }
+  @keyframes accordion-up {
+    from { height: var(--radix-accordion-content-height); }
+    to { height: 0; }
+  }
+
   .glass-morphism {
     background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(10px);
@@ -254,5 +266,29 @@
 
   .scale-102 {
     transform: scale(1.02);
+  }
+
+  @keyframes bg-zoom-slow {
+    from { transform: scale(1.1); }
+    to { transform: scale(1); }
+  }
+  .animate-bg-zoom-slow {
+    animation: bg-zoom-slow 4s ease-out both;
+  }
+
+  @keyframes soft-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  .animate-soft-float {
+    animation: soft-float 6.5s ease-in-out infinite;
+  }
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-up {
+    animation: fade-up 0.6s ease-out both;
   }
 }
