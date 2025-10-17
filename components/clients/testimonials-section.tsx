@@ -80,33 +80,25 @@ export function TestimonialsSection() {
           We're trusted by leading worldwide experts.
         </h2>
 
-        <div ref={containerRef} className="space-y-16">
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={testimonial.id}
-              data-testimonial-id={testimonial.id}
-              className={`flex flex-col ${testimonial.position === "left" ? "md:flex-row" : "md:flex-row-reverse"} gap-8 items-center ${
-                visibleTestimonials.includes(testimonial.id) ? "animate-fade-in-up" : "opacity-0"
-              }`}
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              {/* Avatar */}
-              <div className="flex-shrink-0">
-                <div className="w-24 h-24 rounded-full bg-blue-100 flex items-center justify-center text-5xl">
-                  {testimonial.avatar}
-                </div>
-              </div>
+        <div className="py-6">
+          {/* Use retro carousel component */}
+          {/* Build items for the Carousel using existing testimonial data */}
+          <div className="max-w-5xl mx-auto px-4">
+            {/* Dynamically import components to avoid SSR issues if needed */}
+            {/* Create cards array expected by Carousel */}
+            {(() => {
+              const cards = testimonials.map((t, i) => (
+                <TestimonialCard key={t.id} testimonial={{
+                  name: t.name,
+                  designation: t.title,
+                  description: t.quote,
+                  profileImage: typeof t.avatar === 'string' ? '' : ''
+                }} index={i} />
+              ))
 
-              {/* Quote Card */}
-              <div className="flex-1 bg-white p-8 rounded-2xl shadow-lg">
-                <p className="text-lg text-muted-foreground leading-relaxed mb-4">"{testimonial.quote}"</p>
-                <div>
-                  <p className="font-semibold text-foreground">{testimonial.name}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.title}</p>
-                </div>
-              </div>
-            </div>
-          ))}
+              return <Carousel items={cards} />
+            })()}
+          </div>
         </div>
       </div>
     </section>
