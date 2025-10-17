@@ -1,0 +1,107 @@
+"use client"
+
+import { useEffect, useRef, useState } from "react"
+
+interface ClientCard {
+  id: number
+  name: string
+  description: string
+  logo: string
+}
+
+const clients: ClientCard[] = [
+  {
+    id: 1,
+    name: "Fevicol",
+    description:
+      "One of the most trusted adhesive brands in India, Fevicol has set industry standards for decades. With reliability in manufacturing and construction, we made it a household name.",
+    logo: "🔵",
+  },
+  {
+    id: 2,
+    name: "Fevikwik",
+    description:
+      "Leading the instant adhesive segment with fierce loyalty, Fevikwik is known for its fast-acting, strong bonding formula. It is widely used for quick household repairs, industrial applications, and consumer needs.",
+    logo: "🔴",
+  },
+  {
+    id: 3,
+    name: "Mirchi",
+    description:
+      "A pioneer and undisputed king of the nationwide Radio leading each network, Radio Mirchi. With its engaging music, talk shows, and big FM presence, Mirchi connects with millions of listeners daily.",
+    logo: "🌶️",
+  },
+  {
+    id: 4,
+    name: "Zespri",
+    description:
+      "It globally recognizes best fruit & premium kiwifruit brand delivering excellence in both offering a bright, vibrant taste & fresh produce world. The only quality nutritious fruit has grown successfully.",
+    logo: "🥝",
+  },
+  {
+    id: 5,
+    name: "ICICI Bank",
+    description:
+      "One of India's biggest and most prestigious for vast corporate banking. They offer comprehensive range of banking and financial services, including retail corporate, and a good banking solution.",
+    logo: "🏦",
+  },
+  {
+    id: 6,
+    name: "Zee TV",
+    description:
+      "As India's original television story, it is a leading entertainment destination known for its creative programming, including blockbuster shows, reality shows and cultural storytelling.",
+    logo: "📺",
+  },
+]
+
+export function FeaturedClientsGrid() {
+  const [visibleCards, setVisibleCards] = useState<number[]>([])
+  const containerRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const cardId = Number.parseInt(entry.target.getAttribute("data-card-id") || "0")
+            setVisibleCards((prev) => [...new Set([...prev, cardId])])
+          }
+        })
+      },
+      { threshold: 0.1 },
+    )
+
+    const cards = containerRef.current?.querySelectorAll("[data-card-id]")
+    cards?.forEach((card) => observer.observe(card))
+
+    return () => observer.disconnect()
+  }, [])
+
+  return (
+    <section className="py-20 px-4 bg-white">
+      <div className="max-w-7xl mx-auto">
+        <div ref={containerRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {clients.map((client, index) => (
+            <div
+              key={client.id}
+              data-card-id={client.id}
+              className={`p-8 border border-border rounded-2xl shadow-sm hover:shadow-lg hover:scale-102 transition-all duration-300 ${
+                visibleCards.includes(client.id) ? "animate-fade-in-up" : "opacity-0"
+              }`}
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              {/* Logo */}
+              <div className="text-5xl mb-4">{client.logo}</div>
+
+              {/* Client Name */}
+              <h3 className="text-2xl font-bold text-foreground mb-3">{client.name}</h3>
+
+              {/* Description */}
+              <p className="text-muted-foreground leading-relaxed">{client.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
