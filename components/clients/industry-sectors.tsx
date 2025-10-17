@@ -49,8 +49,8 @@ export function IndustrySectors() {
   return (
     <section className="py-20 px-4 bg-white">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Industries We Serve</h2>
-        <p className="text-neutral-500 max-w-2xl mx-auto mb-12">We are proud to be driving a digital revolution across various industry verticals.</p>
+        <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Event Sectors We Serve</h2>
+        <p className="text-neutral-500 max-w-2xl mx-auto mb-12">We design and execute memorable events across a wide range of sectors.</p>
 
         <div ref={containerRef} className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 items-center">
           {industries.map((industry, index) => (
