@@ -85,7 +85,7 @@ export function FeaturedClientsGrid() {
             <div
               key={client.id}
               data-card-id={client.id}
-              className={`bg-white p-10 rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 ${
+              className={`bg-white p-14 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 ${
                 visibleCards.includes(client.id) ? "animate-fade-in-up" : "opacity-0"
               }`}
               style={{ animationDelay: `${index * 0.1}s` }}
