@@ -11,16 +11,16 @@ interface Industry {
 }
 
 const industries: Industry[] = [
-  { id: 1, name: "Logistics", icon: <Truck className="w-6 h-6" /> },
-  { id: 2, name: "Social Networking", icon: <Users className="w-6 h-6" /> },
-  { id: 3, name: "Healthcare", icon: <Heart className="w-6 h-6" /> },
-  { id: 4, name: "Restaurant", icon: <Coffee className="w-6 h-6" /> },
-  { id: 5, name: "Wellness & Fitness", icon: <Activity className="w-6 h-6" /> },
-  { id: 6, name: "Sports", icon: <Trophy className="w-6 h-6" /> },
-  { id: 7, name: "Ecommerce", icon: <ShoppingCart className="w-6 h-6" /> },
-  { id: 8, name: "Real Estate", icon: <Home className="w-6 h-6" /> },
-  { id: 9, name: "Education", icon: <GraduationCap className="w-6 h-6" /> },
-  { id: 10, name: "Travel", icon: <MapPin className="w-6 h-6" /> },
+  { id: 1, name: "Corporate Events", icon: <Users className="w-6 h-6" /> },
+  { id: 2, name: "Weddings", icon: <Heart className="w-6 h-6" /> },
+  { id: 3, name: "Exhibitions & Trade Shows", icon: <ShoppingCart className="w-6 h-6" /> },
+  { id: 4, name: "Private Parties", icon: <Globe className="w-6 h-6" /> },
+  { id: 5, name: "Promotions & Activations", icon: <Activity className="w-6 h-6" /> },
+  { id: 6, name: "Product Launches", icon: <Truck className="w-6 h-6" /> },
+  { id: 7, name: "Conferences & Seminars", icon: <GraduationCap className="w-6 h-6" /> },
+  { id: 8, name: "Award Ceremonies", icon: <Trophy className="w-6 h-6" /> },
+  { id: 9, name: "Festivals & Cultural Events", icon: <Globe className="w-6 h-6" /> },
+  { id: 10, name: "Experiential Marketing", icon: <Home className="w-6 h-6" /> },
 ]
 
 export function IndustrySectors() {
