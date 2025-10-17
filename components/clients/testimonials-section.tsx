@@ -94,7 +94,7 @@ export function TestimonialsSection() {
                   name: t.name,
                   designation: t.title,
                   description: t.quote,
-                  profileImage: typeof t.avatar === 'string' ? '' : ''
+                  profileImage: '/placeholder.svg'
                 }} index={i} />
               ))
 
