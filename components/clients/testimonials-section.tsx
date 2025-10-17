@@ -1,6 +1,8 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
+import dynamic from "next/dynamic"
+import { Carousel, TestimonialCard } from "@/components/ui/retro-testimonial"
 
 interface Testimonial {
   id: number
