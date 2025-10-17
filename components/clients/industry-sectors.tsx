@@ -1,20 +1,26 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
+import { Truck, Globe, Users, Heart, Coffee, Activity, ShoppingCart, Home, GraduationCap, MapPin, Trophy } from "lucide-react"
+import React from "react"
 
 interface Industry {
   id: number
   name: string
-  icon: string
+  icon: React.ReactNode
 }
 
 const industries: Industry[] = [
-  { id: 1, name: "Technology", icon: "💻" },
-  { id: 2, name: "FMCG", icon: "🛍️" },
-  { id: 3, name: "Banking & Finance", icon: "💰" },
-  { id: 4, name: "Media & Entertainment", icon: "🎬" },
-  { id: 5, name: "Retail", icon: "🏪" },
-  { id: 6, name: "Healthcare", icon: "⚕️" },
+  { id: 1, name: "Logistics", icon: <Truck className="w-6 h-6" /> },
+  { id: 2, name: "Social Networking", icon: <Users className="w-6 h-6" /> },
+  { id: 3, name: "Healthcare", icon: <Heart className="w-6 h-6" /> },
+  { id: 4, name: "Restaurant", icon: <Coffee className="w-6 h-6" /> },
+  { id: 5, name: "Wellness & Fitness", icon: <Activity className="w-6 h-6" /> },
+  { id: 6, name: "Sports", icon: <Trophy className="w-6 h-6" /> },
+  { id: 7, name: "Ecommerce", icon: <ShoppingCart className="w-6 h-6" /> },
+  { id: 8, name: "Real Estate", icon: <Home className="w-6 h-6" /> },
+  { id: 9, name: "Education", icon: <GraduationCap className="w-6 h-6" /> },
+  { id: 10, name: "Travel", icon: <MapPin className="w-6 h-6" /> },
 ]
 
 export function IndustrySectors() {
