@@ -43,17 +43,9 @@ export function ProcessSection() {
     <section className="bg-white">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between mb-6">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground">How we work?</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground" style={{ marginRight: "auto", paddingLeft: "40px" }}>How we work?</h2>
         </div>
         <Feature197 features={howWeWork} />
-        <div className="-mt-6 mb-16 px-4 md:px-0">
-          <Link
-            href="/contact"
-            className="inline-block rounded-md bg-black px-5 py-3 text-white hover:bg-neutral-800 transition-colors"
-          >
-            CONTACT US
-          </Link>
-        </div>
       </div>
     </section>
   )

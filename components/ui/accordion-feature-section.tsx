@@ -62,7 +62,7 @@ const Feature197 = ({ features = defaultFeatures }: Feature197Props) => {
   const [activeImage, setActiveImage] = useState(features[0]?.image ?? "")
 
   return (
-    <section className="py-20 md:py-32">
+    <section className="py-20 md:py-32" style={{ padding: "30px 0 50px" }}>
       <div className="container mx-auto px-4">
         <div className="mb-12 flex w-full items-start justify-between gap-12">
           <div className="w-full md:w-1/2">
@@ -100,7 +100,7 @@ const Feature197 = ({ features = defaultFeatures }: Feature197Props) => {
             </Accordion>
           </div>
           <div className="relative m-auto hidden w-1/2 overflow-hidden rounded-xl bg-muted md:block">
-            <img src={activeImage} alt="Feature preview" className="aspect-[4/3] rounded-md object-cover pl-4" />
+            <img src={activeImage} alt="Feature preview" className="aspect-[4/3] rounded-md object-cover" />
           </div>
         </div>
       </div>

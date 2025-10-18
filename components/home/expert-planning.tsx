@@ -31,7 +31,7 @@ const features = [
 
 export function ExpertPlanning() {
   return (
-    <section className="py-20 px-4 bg-white">
+    <section className="bg-white" style={{ padding: "80px 16px 140px" }}>
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Left Column - Features */}
