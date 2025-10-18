@@ -32,7 +32,7 @@ export function AboutIntroduction() {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
           <div className="lg:col-span-2">
-            <div className="relative h-[500px]">
+            <div className="relative h-[550px]">
               <img
                 src="/beach-wedding-setup.jpg"
                 alt="Beach wedding setup"
@@ -56,6 +56,14 @@ export function AboutIntroduction() {
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
                 style={{ transform: isVisible ? "rotate(-3deg)" : "rotate(-3deg) translateY(32px)" }}
+              />
+              <img
+                src="/elegant-event-venue-decoration.jpg"
+                alt="Elegant event venue"
+                className={`absolute top-20 right-4 w-52 h-52 rounded-2xl object-cover shadow-lg transition-all duration-700 delay-400 ${
+                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-8"
+                }`}
+                style={{ transform: isVisible ? "rotate(4deg)" : "rotate(4deg) translateY(-32px)" }}
               />
             </div>
           </div>
