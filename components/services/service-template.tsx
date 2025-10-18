@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react"
 import Link from "next/link"
 import { CheckCircle2, ChevronRight } from "lucide-react"
+import { FlowButton } from "@/components/ui/flow-button"
 
 interface ServiceTemplateProps {
   title: string
