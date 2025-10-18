@@ -1,8 +1,17 @@
+"use client"
+
 import Link from "next/link"
 import { Facebook, Instagram, Youtube, Phone, Mail, ArrowUp } from "lucide-react"
 import { TextHoverEffect, FooterBackgroundGradient } from "@/components/ui/hover-footer"
+import { useEffect, useState } from "react"
 
 export function Footer() {
+  const [year, setYear] = useState(new Date().getFullYear())
+
+  useEffect(() => {
+    setYear(new Date().getFullYear())
+  }, [])
+
   return (
     <footer className="bg-[#0F0F11]/10 relative h-fit rounded-3xl overflow-hidden m-8">
       <div className="max-w-7xl mx-auto p-14 z-40 relative">
@@ -123,7 +132,7 @@ export function Footer() {
 
           {/* Copyright */}
           <p className="text-center md:text-left">
-            &copy; {new Date().getFullYear()} Pride Eventz. All rights reserved.
+            &copy; {year} Pride Eventz. All rights reserved.
           </p>
         </div>
       </div>
