@@ -197,6 +197,7 @@ export function ServiceTemplate({
         <p className="text-lg mb-8 text-white/90">Let's create something extraordinary together</p>
         <Link
           href="/contact"
+          prefetch={false}
           className="inline-block px-8 py-3 bg-white text-primary rounded-lg font-semibold hover:bg-secondary transition-colors"
         >
           Contact Us Today
