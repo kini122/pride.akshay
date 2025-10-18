@@ -49,7 +49,7 @@ export function CustomersSection({ customers = [], className }: CustomersSection
             container: { visible: { transition: { staggerChildren: 0.05, delayChildren: 0.75 } } },
             ...transitionVariants,
           }}
-          className="group-hover:blur-xs mx-auto mt-12 grid max-w-2xl grid-cols-4 gap-x-12 gap-y-8 transition-all duration-500 group-hover:opacity-50 sm:gap-x-16 sm:gap-y-14"
+          className="group-hover:blur-xs mx-auto mt-12 grid max-w-4xl grid-cols-4 gap-x-16 gap-y-12 transition-all duration-500 group-hover:opacity-50 sm:gap-x-24 sm:gap-y-16"
         >
           {customers.map((logo, index) => (
             <div key={index} className="flex">
