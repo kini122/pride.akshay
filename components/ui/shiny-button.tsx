@@ -60,9 +60,14 @@ export function ShinyButton({ children, onClick, className = "", href }: ShinyBu
         font-size: 1.125rem;
         line-height: 1.2;
         font-weight: 500;
-        border: 1px solid transparent;
+        /* default visible border; can be overridden via --shiny-cta-border CSS variable */
+        --shiny-cta-border: var(--shiny-cta-border, #ffffff);
+        border: 2px solid var(--shiny-cta-border);
         border-radius: 360px;
         color: var(--shiny-cta-fg);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         background: linear-gradient(var(--shiny-cta-bg), var(--shiny-cta-bg)) padding-box,
           conic-gradient(
             from calc(var(--gradient-angle) - var(--gradient-angle-offset)),
