@@ -154,12 +154,9 @@ export function ServiceTemplate({
                     </li>
                   ))}
                 </ul>
-                <Link
-                  href="/contact"
-                  className="block w-full py-3 bg-primary text-white rounded-lg text-center font-semibold hover:bg-accent transition-colors"
-                >
-                  Get Started
-                </Link>
+                <div>
+                  <FlowButton href="/contact" text="Get Started" />
+                </div>
               </div>
             ))}
           </div>
