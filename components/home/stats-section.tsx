@@ -91,7 +91,7 @@ export function StatsSection() {
           {stats.map((stat, index) => (
             <div key={stat.label} className="bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20">
               <div className="text-5xl md:text-6xl font-bold text-primary mb-2">
-                {counts[index]}
+                <div>{counts[index]}</div>
                 {stat.suffix}
               </div>
               <p className="text-lg text-white/80">{stat.label}</p>
