@@ -145,12 +145,11 @@ export function Navbar() {
           </nav>
 
           {/* CTA Button */}
-          <Link
-            href="/contact"
-            className="hidden sm:inline-block rounded-full border-2 border-white px-8 py-2.5 text-[14px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#2c3e50] hover:shadow-lg"
-          >
-            Let&apos;s work together
-          </Link>
+          <div className="hidden sm:inline-block">
+            <ShinyButton href="/contact" className="text-[14px] font-medium">
+              Let&apos;s work together
+            </ShinyButton>
+          </div>
 
           {/* Mobile Menu Button */}
           <button
