@@ -63,7 +63,7 @@ export function ExpertPlanning() {
           </div>
 
           {/* Right Column - Image Grid */}
-          <div className="grid grid-cols-2 gap-4" style={{ paddingTop: "155px" }}>
+          <div className="grid grid-cols-2 gap-4" style={{ paddingTop: "198px" }}>
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2F39ae946dc8af40c8b70646f61cd45ef0%2F0f18591e64d74651873c54c06db9c3d7"
               alt="DJ setup"
