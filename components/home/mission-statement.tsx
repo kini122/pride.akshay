@@ -2,7 +2,7 @@
 
 export function MissionStatement() {
   return (
-    <section className="py-20 bg-white">
+    <section className="bg-white" style={{ padding: "80px 0 68px" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header with Learn More Link */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-16">
@@ -18,7 +18,7 @@ export function MissionStatement() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Left Column - Image */}
           <div className="rounded-lg overflow-hidden shadow-lg">
-            <img src="/mall-exhibition-hall-event-space.jpg" alt="Event space" className="w-full h-96 object-cover" />
+            <img src="/mall-exhibition-hall-event-space.jpg" alt="Event space" className="w-full object-cover" style={{ height: "436px" }} />
           </div>
 
           {/* Right Column - Text Blocks */}
