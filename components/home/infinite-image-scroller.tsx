@@ -10,7 +10,7 @@ interface InfiniteImageScrollerProps {
 
 export function InfiniteImageScroller({
   images = [],
-  height = "240px",
+  height = "360px",
 }: InfiniteImageScrollerProps) {
   const containerRef = useRef<HTMLDivElement | null>(null)
   const rafRef = useRef<number | null>(null)
