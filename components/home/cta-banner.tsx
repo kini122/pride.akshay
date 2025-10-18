@@ -1,5 +1,7 @@
 import Link from "next/link"
 
+import { FlowButton } from "@/components/ui/flow-button"
+
 export function CTABanner() {
   return (
     <section
