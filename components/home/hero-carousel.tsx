@@ -75,34 +75,6 @@ export function HeroCarousel() {
         </div>
       </div>
 
-      {/* Carousel Controls */}
-      <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 z-20 flex gap-4 items-center">
-        <button
-          onClick={goToPrevious}
-          className="p-2 rounded-full bg-white/20 hover:bg-white/40 transition-colors text-white"
-        >
-          <ChevronLeft className="w-6 h-6" />
-        </button>
-
-        <div className="flex gap-2">
-          {heroImages.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goToImage(index)}
-              className={`w-3 h-3 rounded-full transition-all ${
-                index === currentImageIndex ? "bg-white w-8" : "bg-white/50"
-              }`}
-            />
-          ))}
-        </div>
-
-        <button
-          onClick={goToNext}
-          className="p-2 rounded-full bg-white/20 hover:bg-white/40 transition-colors text-white"
-        >
-          <ChevronRight className="w-6 h-6" />
-        </button>
-      </div>
     </section>
   )
 }
