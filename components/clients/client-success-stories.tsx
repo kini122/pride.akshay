@@ -13,7 +13,8 @@ interface CaseStudy {
 const caseStudies: CaseStudy[] = [
   {
     id: 1,
-    clientLogo: "🌶️",
+    clientLogo:
+      "https://cdn.builder.io/api/v1/image/assets%2F1256c551aea145f5add95fd9566b369a%2F43685caaf33f477d8727c7c101d94598?format=webp&width=800",
     title: "Radio Mirchi Launch Event",
     description:
       "Organized a massive launch event for Radio Mirchi's new FM station with live performances and brand activations.",
@@ -21,7 +22,8 @@ const caseStudies: CaseStudy[] = [
   },
   {
     id: 2,
-    clientLogo: "🏦",
+    clientLogo:
+      "https://cdn.builder.io/api/v1/image/assets%2F1256c551aea145f5add95fd9566b369a%2F8d0796d75587491cb48a4aef8f271f8a?format=webp&width=800",
     title: "ICICI Bank Corporate Summit",
     description:
       "Executed a large-scale corporate summit for ICICI Bank with keynote speakers and networking sessions.",
@@ -29,7 +31,8 @@ const caseStudies: CaseStudy[] = [
   },
   {
     id: 3,
-    clientLogo: "📺",
+    clientLogo:
+      "https://cdn.builder.io/api/v1/image/assets%2F1256c551aea145f5add95fd9566b369a%2Ff973d20f7dc04da191c48d574a351db0?format=webp&width=800",
     title: "Zee TV Awards Ceremony",
     description: "Produced a glamorous awards ceremony for Zee TV with celebrity performances and live streaming.",
     results: "Garnered 5M+ TV viewership and trending on social media for 3 days",
@@ -74,7 +77,9 @@ export function ClientSuccessStories() {
               }`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="text-5xl mb-4">{study.clientLogo}</div>
+              <div className="client-logo mb-4">
+                <img src={study.clientLogo} alt={`${study.title} logo`} className="w-28 h-auto mx-auto object-contain" />
+              </div>
               <h3 className="text-xl font-bold text-foreground mb-3">{study.title}</h3>
               <p className="text-muted-foreground mb-4">{study.description}</p>
               <div className="pt-4 border-t border-border">

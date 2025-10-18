@@ -1,20 +1,26 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
+import { Truck, Globe, Users, Heart, Coffee, Activity, ShoppingCart, Home, GraduationCap, MapPin, Trophy } from "lucide-react"
+import React from "react"
 
 interface Industry {
   id: number
   name: string
-  icon: string
+  icon: React.ReactNode
 }
 
 const industries: Industry[] = [
-  { id: 1, name: "Technology", icon: "💻" },
-  { id: 2, name: "FMCG", icon: "🛍️" },
-  { id: 3, name: "Banking & Finance", icon: "💰" },
-  { id: 4, name: "Media & Entertainment", icon: "🎬" },
-  { id: 5, name: "Retail", icon: "🏪" },
-  { id: 6, name: "Healthcare", icon: "⚕️" },
+  { id: 1, name: "Corporate Events", icon: <Users className="w-6 h-6" /> },
+  { id: 2, name: "Weddings", icon: <Heart className="w-6 h-6" /> },
+  { id: 3, name: "Exhibitions & Trade Shows", icon: <ShoppingCart className="w-6 h-6" /> },
+  { id: 4, name: "Private Parties", icon: <Globe className="w-6 h-6" /> },
+  { id: 5, name: "Promotions & Activations", icon: <Activity className="w-6 h-6" /> },
+  { id: 6, name: "Product Launches", icon: <Truck className="w-6 h-6" /> },
+  { id: 7, name: "Conferences & Seminars", icon: <GraduationCap className="w-6 h-6" /> },
+  { id: 8, name: "Award Ceremonies", icon: <Trophy className="w-6 h-6" /> },
+  { id: 9, name: "Festivals & Cultural Events", icon: <Globe className="w-6 h-6" /> },
+  { id: 10, name: "Experiential Marketing", icon: <Home className="w-6 h-6" /> },
 ]
 
 export function IndustrySectors() {
@@ -42,21 +48,25 @@ export function IndustrySectors() {
 
   return (
     <section className="py-20 px-4 bg-white">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-foreground mb-16">Industries We Serve</h2>
+      <div className="max-w-6xl mx-auto text-center">
+        <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Event Sectors We Serve</h2>
+        <p className="text-neutral-500 max-w-2xl mx-auto mb-12">We design and execute memorable events across a wide range of sectors.</p>
 
-        <div ref={containerRef} className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        <div ref={containerRef} className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 items-center">
           {industries.map((industry, index) => (
             <div
               key={industry.id}
               data-industry-id={industry.id}
-              className={`p-6 bg-white border border-border rounded-xl text-center hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer ${
+              className={`flex flex-col items-center gap-4 transition-transform duration-300 ${
                 visibleIndustries.includes(industry.id) ? "animate-fade-in-up" : "opacity-0"
               }`}
               style={{ animationDelay: `${index * 0.05}s` }}
             >
-              <div className="text-4xl mb-3">{industry.icon}</div>
-              <p className="font-semibold text-foreground text-sm">{industry.name}</p>
+              <div className="w-20 h-20 rounded-full bg-[#a6d24a] flex items-center justify-center text-white shadow-sm">
+                {/* icon */}
+                <div className="text-white">{industry.icon}</div>
+              </div>
+              <p className="text-sm font-semibold text-neutral-800 mt-1">{industry.name}</p>
             </div>
           ))}
         </div>
