@@ -146,9 +146,9 @@ export function Navbar() {
 
           {/* CTA Button */}
           <div className="hidden sm:inline-block">
-            <ShinyButton href="/contact" className="text-[14px] font-medium">
+            <HoverButton className="px-2 py-1 bg-transparent border-none text-white" onClick={() => window.location.href = '/contact'}>
               Let&apos;s work together
-            </ShinyButton>
+            </HoverButton>
           </div>
 
           {/* Mobile Menu Button */}
