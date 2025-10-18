@@ -39,7 +39,6 @@ export default function PromotionsPage() {
       <StatsCounter />
       <GallerySection />
       <FAQAccordion />
-      <PricingSection />
       <CTASection />
       <RelatedServices />
       <Footer />
