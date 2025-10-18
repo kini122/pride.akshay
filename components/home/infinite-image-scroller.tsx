@@ -10,23 +10,24 @@ interface InfiniteImageScrollerProps {
 
 export function InfiniteImageScroller({
   images = [],
-  height = "160px",
+  height = "240px",
 }: InfiniteImageScrollerProps) {
   const containerRef = useRef<HTMLDivElement | null>(null)
   const rafRef = useRef<number | null>(null)
   const [isPaused, setIsPaused] = useState(false)
 
-  // If no images provided, use a set of random images (Unsplash)
+  // Default event-related images (use attachments provided)
   const defaultImages = [
-    "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=1",
-    "https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=2",
-    "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=3",
-    "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=4",
-    "https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=5",
-    "https://images.unsplash.com/photo-1526178616146-7a8a6c6f1f6f?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=6",
+    "https://cdn.builder.io/api/v1/image/assets%2F2bdfb75c4a42464ea64f680845f3e793%2Fcd443962bb69492792ab94b10321652c?format=webp&width=800",
+    "https://cdn.builder.io/api/v1/image/assets%2F2bdfb75c4a42464ea64f680845f3e793%2F4a62f28d02fb46af8dccaaae6befa4a3?format=webp&width=800",
+    "https://cdn.builder.io/api/v1/image/assets%2F2bdfb75c4a42464ea64f680845f3e793%2Fc44ee380588a4d50af68d7e6bdb8176e?format=webp&width=800",
+    "https://cdn.builder.io/api/v1/image/assets%2F2bdfb75c4a42464ea64f680845f3e793%2F13995c1f8ea343e681b717c5aaafc212?format=webp&width=800",
+    "https://cdn.builder.io/api/v1/image/assets%2F2bdfb75c4a42464ea64f680845f3e793%2Fa1e808a469904c399f626f2e547350df?format=webp&width=800",
+    "https://cdn.builder.io/api/v1/image/assets%2F2bdfb75c4a42464ea64f680845f3e793%2F084381e89ac04933a43b5de3b6e70121?format=webp&width=800",
   ]
 
   const imgs = images.length ? images : defaultImages
+  // Ensure consistent size for each slide based on the provided height
 
   useEffect(() => {
     const container = containerRef.current
@@ -101,7 +102,11 @@ export function InfiniteImageScroller({
       >
         <div className="inline-flex" style={{ willChange: "transform" }}>
           {imgs.concat(imgs).map((src, i) => (
-            <div key={i} className="flex-shrink-0 w-48 h-full mr-4 rounded-lg overflow-hidden shadow-md bg-gray-100">
+            <div
+              key={i}
+              className="flex-shrink-0 mr-4 rounded-lg overflow-hidden shadow-md bg-gray-100"
+              style={{ width: height, height: '100%' }}
+            >
               <img src={src} alt={`scroller-${i}`} className="w-full h-full object-cover" />
             </div>
           ))}
