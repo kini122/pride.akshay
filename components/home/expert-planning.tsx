@@ -69,7 +69,7 @@ export function ExpertPlanning() {
               fontWeight: "400",
               gap: "16px",
               gridTemplateColumns: "repeat(2, minmax(0px, 1fr))",
-              paddingTop: "198px",
+              padding: "241px 2px 0 0",
             }}
           >
             <img
@@ -82,9 +82,10 @@ export function ExpertPlanning() {
                 boxShadow:
                   "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px",
                 fontWeight: "400",
-                height: "192px",
+                height: "244px",
                 objectFit: "cover",
                 width: "100%",
+                marginRight: "-2px",
               }}
             />
             <img
@@ -97,9 +98,10 @@ export function ExpertPlanning() {
                 boxShadow:
                   "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px",
                 fontWeight: "400",
-                height: "192px",
+                height: "176px",
                 objectFit: "cover",
                 width: "100%",
+                marginLeft: "-2px",
               }}
             />
             <img
@@ -132,9 +134,11 @@ export function ExpertPlanning() {
                 boxShadow:
                   "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px",
                 fontWeight: "400",
-                height: "192px",
+                height: "273px",
                 objectFit: "cover",
                 width: "100%",
+                paddingBottom: "3px",
+                margin: "-76px 0 19px",
               }}
             />
           </div>
