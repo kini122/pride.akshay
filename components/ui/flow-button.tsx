@@ -26,7 +26,7 @@ export function FlowButton({ text = "Modern Button", href }: { text?: string; hr
 
   if (href) {
     return (
-      <Link href={href} className={classes}>
+      <Link href={href} prefetch={false} className={classes}>
         {inner}
       </Link>
     )
