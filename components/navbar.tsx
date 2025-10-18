@@ -5,6 +5,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Menu, X, ChevronDown } from "lucide-react"
 import { ShinyButton } from "@/components/ui/shiny-button"
+import { HoverButton } from "@/components/ui/hover-button"
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
