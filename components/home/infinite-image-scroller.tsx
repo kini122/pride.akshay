@@ -100,7 +100,7 @@ export function InfiniteImageScroller({
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
       >
-        <div className="inline-flex" style={{ willChange: "transform" }}>
+        <div className="inline-flex" style={{ willChange: "transform", justifyContent: 'flex-start', alignItems: 'flex-start', paddingTop: '104px' }}>
           {imgs.concat(imgs).map((src, i) => (
             <div
               key={i}
