@@ -63,31 +63,78 @@ export function ExpertPlanning() {
           </div>
 
           {/* Right Column - Image Grid */}
-          <div className="grid grid-cols-2 gap-4" style={{ paddingTop: "198px" }}>
+          <div
+            style={{
+              display: "grid",
+              fontWeight: "400",
+              gap: "16px",
+              gridTemplate: "none / repeat(2, minmax(0px, 1fr))",
+              paddingTop: "198px",
+            }}
+          >
             <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F39ae946dc8af40c8b70646f61cd45ef0%2F0f18591e64d74651873c54c06db9c3d7"
               alt="DJ setup"
-              className="w-full h-48 object-cover rounded-lg shadow-lg"
-            />
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F39ae946dc8af40c8b70646f61cd45ef0%2F9088b880cfb84b6987b31afac6b38ba2?format=webp"
-              alt="Decorations"
-              className="w-full h-48 object-cover rounded-lg shadow-lg"
-            />
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F39ae946dc8af40c8b70646f61cd45ef0%2F0204cca0c7114c80b24a5817adb9416b"
-              alt="Lighting"
-              className="w-full h-48 object-cover rounded-lg shadow-lg"
-            />
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F39ae946dc8af40c8b70646f61cd45ef0%2Fec6c218f1d534cd2899d6f9dc8afeef3"
-              alt="Atmosphere"
-              className="w-full h-48 object-cover rounded-lg shadow-lg"
+              loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets%2F39ae946dc8af40c8b70646f61cd45ef0%2F0f18591e64d74651873c54c06db9c3d7"
               style={{
-                backgroundImage: 'url("https://cdn.builder.io/api/v1/image/assets%2F39ae946dc8af40c8b70646f61cd45ef0%2Fec6c218f1d534cd2899d6f9dc8afeef3")',
+                display: "block",
+                borderRadius: "10px",
+                boxShadow:
+                  "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px",
+                fontWeight: "400",
+                height: "192px",
+                objectFit: "cover",
+                width: "100%",
+              }}
+            />
+            <img
+              alt="Decorations"
+              loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets%2F39ae946dc8af40c8b70646f61cd45ef0%2F9088b880cfb84b6987b31afac6b38ba2?format=webp"
+              style={{
+                display: "block",
+                borderRadius: "10px",
+                boxShadow:
+                  "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px",
+                fontWeight: "400",
+                height: "192px",
+                objectFit: "cover",
+                width: "100%",
+              }}
+            />
+            <img
+              alt="Lighting"
+              loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets%2F39ae946dc8af40c8b70646f61cd45ef0%2F0204cca0c7114c80b24a5817adb9416b"
+              style={{
+                display: "block",
+                borderRadius: "10px",
+                boxShadow:
+                  "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px",
+                fontWeight: "400",
+                height: "192px",
+                objectFit: "cover",
+                width: "100%",
+              }}
+            />
+            <img
+              alt="Atmosphere"
+              loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets%2F39ae946dc8af40c8b70646f61cd45ef0%2Fec6c218f1d534cd2899d6f9dc8afeef3"
+              style={{
+                display: "block",
+                backgroundImage:
+                  'url("https://cdn.builder.io/api/v1/image/assets%2F39ae946dc8af40c8b70646f61cd45ef0%2Fec6c218f1d534cd2899d6f9dc8afeef3")',
+                backgroundPosition: "50% 50%",
                 backgroundRepeat: "no-repeat",
-                backgroundPosition: "center",
                 backgroundSize: "cover",
+                borderRadius: "10px",
+                boxShadow:
+                  "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px",
+                fontWeight: "400",
+                height: "192px",
+                objectFit: "cover",
+                width: "100%",
               }}
             />
           </div>
