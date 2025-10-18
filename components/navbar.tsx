@@ -146,7 +146,20 @@ export function Navbar() {
           </nav>
 
           {/* CTA Button */}
-          <div className="hidden sm:inline-block">
+          <div className="hidden sm:inline-block" style={{
+            display: 'inline-block',
+            backdropFilter: 'orange(16px)',
+            borderRadius: '24px',
+            color: 'rgb(255, 255, 255)',
+            fontWeight: 500,
+            isolation: 'isolate',
+            overflowX: 'hidden',
+            overflowY: 'hidden',
+            position: 'relative',
+            backgroundColor: 'rgba(0, 0, 0, 0)',
+            borderColor: 'rgba(0, 0, 0, 0)',
+            padding: '4px 8px',
+          }}>
             <HoverButton className="px-2 py-1 bg-transparent border-none text-white" onClick={() => window.location.href = '/contact'}>
               Let&apos;s work together
             </HoverButton>
