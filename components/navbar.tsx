@@ -100,6 +100,7 @@ export function Navbar() {
                     <Link
                       key={service.href}
                       href={service.href}
+                      prefetch={false}
                       className="block px-5 py-2.5 text-white/80 hover:text-white hover:bg-white/10 transition-all duration-200 text-sm font-medium"
                     >
                       {service.name}
