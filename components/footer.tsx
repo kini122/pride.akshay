@@ -138,8 +138,8 @@ export function Footer() {
       </div>
 
       {/* Text hover effect */}
-      <div className="lg:flex hidden h-[30rem] -mt-52 -mb-36">
-        <TextHoverEffect text="Pride" className="z-50" />
+      <div className="lg:flex hidden h-[30rem] -mt-52 -mb-36 pointer-events-none" style={{ zIndex: -10 }}>
+        <TextHoverEffect text="Pride" className="" />
       </div>
 
       <FooterBackgroundGradient />
