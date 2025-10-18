@@ -19,13 +19,11 @@ export function Footer() {
           {/* Column 1 - Company Info */}
           <div>
             <div className="flex items-center gap-3">
-              <span className="inline-flex h-10 w-10 items-center justify-center rounded-md border-2 border-[#1F1F1F]">
-                <span className="flex flex-col gap-1.5">
-                  <span className="block h-0.5 w-5 bg-[#1F1F1F]" />
-                  <span className="block h-0.5 w-5 bg-[#1F1F1F]" />
-                  <span className="block h-0.5 w-5 bg-[#1F1F1F]" />
-                </span>
-              </span>
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F6241002a28724d6b8f1149d981f5257e%2F4220e3e82a1f46b3b96e9daf8656a8a6?format=webp&width=800"
+                alt="Pride Eventz Logo"
+                className="h-10 w-10 object-contain"
+              />
               <span className="font-semibold text-lg text-[#1F1F1F]">Pride Eventz</span>
             </div>
             <p className="text-[#2D2D2D] mt-4 max-w-[280px] text-[14px] leading-[1.6]">

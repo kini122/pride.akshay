@@ -43,13 +43,11 @@ export function Navbar() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 text-white hover:opacity-80 transition-opacity">
-            <span className="inline-flex h-10 w-10 items-center justify-center rounded-md border-2 border-white">
-              <span className="flex flex-col gap-1.5">
-                <span className="block h-0.5 w-5 bg-white" />
-                <span className="block h-0.5 w-5 bg-white" />
-                <span className="block h-0.5 w-5 bg-white" />
-              </span>
-            </span>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F6241002a28724d6b8f1149d981f5257e%2F4220e3e82a1f46b3b96e9daf8656a8a6?format=webp&width=800"
+              alt="Pride Eventz Logo"
+              className="h-10 w-10 object-contain"
+            />
             <span className="hidden sm:inline text-[17px] font-semibold tracking-tight text-white">Pride Eventz</span>
           </Link>
 
