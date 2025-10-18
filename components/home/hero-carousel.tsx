@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const heroImages = ["/luxury-event-party-celebration.jpg", "/elegant-event-venue-decoration.jpg", "/premium-party-atmosphere.jpg"]
 
@@ -14,18 +13,6 @@ export function HeroCarousel() {
     }, 5000)
     return () => clearInterval(timer)
   }, [])
-
-  const goToImage = (index: number) => {
-    setCurrentImageIndex(index)
-  }
-
-  const goToPrevious = () => {
-    setCurrentImageIndex((prev) => (prev - 1 + heroImages.length) % heroImages.length)
-  }
-
-  const goToNext = () => {
-    setCurrentImageIndex((prev) => (prev + 1) % heroImages.length)
-  }
 
   return (
     <section className="relative w-full h-screen flex items-center justify-center overflow-hidden pt-16">
