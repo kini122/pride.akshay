@@ -1,3 +1,4 @@
+import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { AboutHero } from "@/components/about/about-hero"
 import { AboutIntroduction } from "@/components/about/about-introduction"
@@ -14,6 +15,7 @@ import { CTASection } from "@/components/about/cta-section"
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-white">
+      <Navbar />
       <AboutHero />
       <AboutIntroduction />
       <ServicesCarouselSection />
