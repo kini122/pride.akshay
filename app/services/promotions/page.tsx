@@ -17,7 +17,6 @@ import { IndustriesServed } from "@/components/promotions/industries-served"
 import { StatsCounter } from "@/components/promotions/stats-counter"
 import { GallerySection } from "@/components/promotions/gallery-section"
 import { FAQAccordion } from "@/components/promotions/faq-accordion"
-import { PricingSection } from "@/components/promotions/pricing-section"
 import { CTASection } from "@/components/promotions/cta-section"
 import { RelatedServices } from "@/components/promotions/related-services"
 
