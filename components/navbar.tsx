@@ -209,13 +209,13 @@ export function Navbar() {
                 ))}
               </div>
             )}
-            <Link href="/gallery" className="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 transition-colors text-sm font-medium">
+            <Link href="/gallery" prefetch={false} className="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 transition-colors text-sm font-medium">
               Portfolio
             </Link>
-            <Link href="/clients" className="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 transition-colors text-sm font-medium">
+            <Link href="/clients" prefetch={false} className="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 transition-colors text-sm font-medium">
               Our Clients
             </Link>
-            <Link href="/contact" className="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 transition-colors text-sm font-medium">
+            <Link href="/contact" prefetch={false} className="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 transition-colors text-sm font-medium">
               Contact
             </Link>
           </div>
