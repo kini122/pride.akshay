@@ -105,7 +105,7 @@ export function InfiniteImageScroller({
             <div
               key={i}
               className="flex-shrink-0 mr-4 rounded-lg overflow-hidden shadow-md bg-gray-100"
-              style={{ width: height, height: '100%' }}
+              style={{ width: '360px', height: '100%' }}
             >
               <img src={src} alt={`scroller-${i}`} className="w-full h-full object-cover transform-gpu will-change-transform" style={{ transform: 'scale(1.06)', transition: 'transform 600ms ease' }} />
             </div>
