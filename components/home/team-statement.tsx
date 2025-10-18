@@ -1,5 +1,9 @@
 "use client"
 
+import dynamic from "next/dynamic"
+
+const DynamicScroller = dynamic(() => import("./infinite-image-scroller").then((mod) => mod.InfiniteImageScroller), { ssr: false })
+
 export function TeamStatement() {
   return (
     <section className="py-20 bg-white">
@@ -26,7 +30,6 @@ export function TeamStatement() {
           <div className="flex items-center justify-center">
             {/* Infinite horizontal image scroller with arrows */}
             <div className="w-full max-w-2xl">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
               <DynamicScroller />
             </div>
           </div>
