@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export function CTASection() {
   return (
-    <section className="py-24 px-4 bg-primary">
+    <section className="py-24 px-4" style={{ backgroundColor: "rgba(246, 109, 55, 1)" }}>
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
           Ready to Create Your Next Unforgettable Event?
