@@ -6,25 +6,25 @@ const teamMembers = [
   {
     name: "Arun Menon",
     role: "Founder & Creative Director",
-    image: "/placeholder.svg?key=team-arun",
+    image: "/professional-headshot.png",
     bio: "Visionary leader with 20+ years in event management",
   },
   {
     name: "Priya Sharma",
     role: "Operations Manager",
-    image: "/placeholder.svg?key=team-priya",
+    image: "/corporate-event-exhibition.jpg",
     bio: "Expert in logistics and seamless execution",
   },
   {
     name: "Vikram Kumar",
     role: "Design Lead",
-    image: "/placeholder.svg?key=team-vikram",
+    image: "/beach-wedding-setup.jpg",
     bio: "Creative genius behind stunning event aesthetics",
   },
   {
     name: "Anjali Nair",
     role: "Client Relations",
-    image: "/placeholder.svg?key=team-anjali",
+    image: "/luxury-event-party-celebration.jpg",
     bio: "Dedicated to exceeding client expectations",
   },
 ]
