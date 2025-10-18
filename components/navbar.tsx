@@ -33,35 +33,35 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white shadow-lg" : "glass-morphism"
+      className={`fixed top-0 w-full z-50 transition-all duration-300 backdrop-blur-md border-b ${
+        isScrolled
+          ? "bg-[rgba(44,62,80,0.70)] border-white/10 shadow-lg"
+          : "bg-[rgba(44,62,80,0.60)] border-white/10"
       }`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 text-[#2D1B1B] hover:opacity-90">
-            <span className="inline-flex h-10 w-10 items-center justify-center rounded-md border-2 border-[#2D1B1B]">
-              <span className="flex flex-col gap-1.5">
-                <span className="block h-0.5 w-5 bg-[#F97316]" />
-                <span className="block h-0.5 w-5 bg-[#F97316]" />
-                <span className="block h-0.5 w-5 bg-[#F97316]" />
-              </span>
-            </span>
-            <span className="hidden sm:inline text-[16px] font-medium tracking-tight">Pride Eventz</span>
+          <Link href="/" className="flex items-center gap-3 text-white hover:opacity-80 transition-opacity">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F6241002a28724d6b8f1149d981f5257e%2F4220e3e82a1f46b3b96e9daf8656a8a6?format=webp&width=800"
+              alt="Pride Eventz Logo"
+              className="h-10 w-10 object-contain"
+            />
+            <span className="hidden sm:inline text-[17px] font-semibold tracking-tight text-white">Pride Eventz</span>
           </Link>
 
           {/* Desktop Menu */}
           <nav className="hidden md:flex items-center" aria-label="Primary">
-            <ul className="flex items-center gap-[44px] text-[15px] md:text-[16px] font-medium text-[#2D1B1B]/90">
+            <ul className="flex items-center gap-8 text-[15px] font-medium text-white/80">
               <li>
                 <Link
                   href="/"
-                  className={`${
+                  className={`transition-all duration-300 relative pb-1 ${
                     isActive("/")
-                      ? "text-[#2D1B1B] border-b-2 border-[#2D1B1B]"
-                      : "hover:text-[#2D1B1B]"
-                  } transition-colors`}
+                      ? "text-white after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-white"
+                      : "hover:text-white after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-white hover:after:w-full after:transition-all after:duration-300"
+                  }`}
                 >
                   Home
                 </Link>
@@ -69,11 +69,11 @@ export function Navbar() {
               <li>
                 <Link
                   href="/about"
-                  className={`${
+                  className={`transition-all duration-300 relative pb-1 ${
                     isActive("/about")
-                      ? "text-[#2D1B1B] border-b-2 border-[#2D1B1B]"
-                      : "hover:text-[#2D1B1B]"
-                  } transition-colors`}
+                      ? "text-white after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-white"
+                      : "hover:text-white after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-white hover:after:w-full after:transition-all after:duration-300"
+                  }`}
                 >
                   About
                 </Link>
@@ -82,21 +82,21 @@ export function Navbar() {
               {/* Services Dropdown */}
               <li className="relative group">
                 <div
-                  className={`flex items-center gap-1 transition-colors ${
+                  className={`flex items-center gap-1.5 transition-all duration-300 relative pb-1 ${
                     isServicesActive
-                      ? "text-[#2D1B1B] border-b-2 border-[#2D1B1B]"
-                      : "text-[#2D1B1B]/90 hover:text-[#2D1B1B]"
+                      ? "text-white after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-white"
+                      : "text-white/80 hover:text-white after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-white hover:after:w-full after:transition-all after:duration-300"
                   }`}
                 >
                   <span>Services</span>
-                  <ChevronDown className="w-4 h-4" />
+                  <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
                 </div>
-                <div className="absolute left-0 mt-2 w-52 rounded-lg border border-[#2D1B1B]/10 bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-2 shadow-xl">
+                <div className="absolute left-0 mt-4 w-56 rounded-xl backdrop-blur-md bg-[rgba(44,62,80,0.9)] border border-white/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-3 shadow-2xl">
                   {services.map((service) => (
                     <Link
                       key={service.href}
                       href={service.href}
-                      className="block px-4 py-2 text-[#2D1B1B] hover:bg-[#FFF5F7] hover:text-[#F97316] transition-colors"
+                      className="block px-5 py-2.5 text-white/80 hover:text-white hover:bg-white/10 transition-all duration-200 text-sm font-medium"
                     >
                       {service.name}
                     </Link>
@@ -107,11 +107,11 @@ export function Navbar() {
               <li>
                 <Link
                   href="/gallery"
-                  className={`${
+                  className={`transition-all duration-300 relative pb-1 ${
                     isActive("/gallery")
-                      ? "text-[#2D1B1B] border-b-2 border-[#2D1B1B]"
-                      : "hover:text-[#2D1B1B]"
-                  } transition-colors`}
+                      ? "text-white after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-white"
+                      : "hover:text-white after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-white hover:after:w-full after:transition-all after:duration-300"
+                  }`}
                 >
                   Portfolio
                 </Link>
@@ -119,11 +119,11 @@ export function Navbar() {
               <li>
                 <Link
                   href="/clients"
-                  className={`${
+                  className={`transition-all duration-300 relative pb-1 ${
                     isActive("/clients")
-                      ? "text-[#2D1B1B] border-b-2 border-[#2D1B1B]"
-                      : "hover:text-[#2D1B1B]"
-                  } transition-colors`}
+                      ? "text-white after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-white"
+                      : "hover:text-white after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-white hover:after:w-full after:transition-all after:duration-300"
+                  }`}
                 >
                   Our Clients
                 </Link>
@@ -131,11 +131,11 @@ export function Navbar() {
               <li>
                 <Link
                   href="/contact"
-                  className={`${
+                  className={`transition-all duration-300 relative pb-1 ${
                     isActive("/contact")
-                      ? "text-[#2D1B1B] border-b-2 border-[#2D1B1B]"
-                      : "hover:text-[#2D1B1B]"
-                  } transition-colors`}
+                      ? "text-white after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-white"
+                      : "hover:text-white after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-white hover:after:w-full after:transition-all after:duration-300"
+                  }`}
                 >
                   Contact
                 </Link>
@@ -146,53 +146,56 @@ export function Navbar() {
           {/* CTA Button */}
           <Link
             href="/contact"
-            className="hidden sm:inline-block rounded-lg border-2 border-[#2D1B1B] px-8 py-3 text-[15px] font-medium text-[#2D1B1B] transition-colors hover:bg-[#FFF5F7]"
+            className="hidden sm:inline-block rounded-full border-2 border-white px-8 py-2.5 text-[14px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#2c3e50] hover:shadow-lg"
           >
             Let&apos;s work together
           </Link>
 
           {/* Mobile Menu Button */}
-          <button className="md:hidden" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+          <button
+            className="md:hidden text-white transition-opacity duration-300 hover:opacity-70"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden pb-4 border-t border-border">
-            <Link href="/" className="block px-4 py-2 text-[#2D1B1B]/90 hover:text-[#2D1B1B]">
+          <div className="md:hidden pb-4 border-t border-white/10 bg-[rgba(44,62,80,0.95)]">
+            <Link href="/" className="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 transition-colors text-sm font-medium">
               Home
             </Link>
-            <Link href="/about" className="block px-4 py-2 text-[#2D1B1B]/90 hover:text-[#2D1B1B]">
+            <Link href="/about" className="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 transition-colors text-sm font-medium">
               About
             </Link>
             <button
               onClick={() => setIsServicesOpen(!isServicesOpen)}
-              className="w-full text-left px-4 py-2 text-[#2D1B1B]/90 hover:text-[#2D1B1B] flex items-center justify-between"
+              className="w-full text-left px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 flex items-center justify-between font-medium text-sm transition-colors"
             >
               Services
-              <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? "rotate-180" : ""}`} />
+              <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isServicesOpen ? "rotate-180" : ""}`} />
             </button>
             {isServicesOpen && (
-              <div className="pl-4">
+              <div className="pl-4 bg-white/5">
                 {services.map((service) => (
                   <Link
                     key={service.href}
                     href={service.href}
-                    className="block px-4 py-2 text-sm text-[#2D1B1B]/90 hover:text-[#2D1B1B]"
+                    className="block px-4 py-2.5 text-sm text-white/70 hover:text-white hover:bg-white/10 transition-colors font-medium"
                   >
                     {service.name}
                   </Link>
                 ))}
               </div>
             )}
-            <Link href="/gallery" className="block px-4 py-2 text-[#2D1B1B]/90 hover:text-[#2D1B1B]">
+            <Link href="/gallery" className="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 transition-colors text-sm font-medium">
               Portfolio
             </Link>
-            <Link href="/clients" className="block px-4 py-2 text-[#2D1B1B]/90 hover:text-[#2D1B1B]">
+            <Link href="/clients" className="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 transition-colors text-sm font-medium">
               Our Clients
             </Link>
-            <Link href="/contact" className="block px-4 py-2 text-[#2D1B1B]/90 hover:text-[#2D1B1B]">
+            <Link href="/contact" className="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 transition-colors text-sm font-medium">
               Contact
             </Link>
           </div>
