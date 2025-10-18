@@ -66,7 +66,15 @@ export function StatsSection() {
       }}
     >
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/50" />
+      <div
+        className="absolute inset-0 bg-black/50"
+        style={{
+          backgroundImage: 'url("https://cdn.builder.io/api/v1/image/assets%2F39ae946dc8af40c8b70646f61cd45ef0%2Fec6c218f1d534cd2899d6f9dc8afeef3")',
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+        }}
+      />
 
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Left side text */}

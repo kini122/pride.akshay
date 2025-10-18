@@ -63,26 +63,32 @@ export function ExpertPlanning() {
           </div>
 
           {/* Right Column - Image Grid */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4" style={{ paddingTop: "155px" }}>
             <img
-              src="/placeholder.svg?key=expert-1"
+              src="https://cdn.builder.io/api/v1/image/assets%2F39ae946dc8af40c8b70646f61cd45ef0%2F0f18591e64d74651873c54c06db9c3d7"
               alt="DJ setup"
               className="w-full h-48 object-cover rounded-lg shadow-lg"
             />
             <img
-              src="/placeholder.svg?key=expert-2"
+              src="https://cdn.builder.io/api/v1/image/assets%2F39ae946dc8af40c8b70646f61cd45ef0%2F9088b880cfb84b6987b31afac6b38ba2?format=webp"
               alt="Decorations"
               className="w-full h-48 object-cover rounded-lg shadow-lg"
             />
             <img
-              src="/placeholder.svg?key=expert-3"
+              src="https://cdn.builder.io/api/v1/image/assets%2F39ae946dc8af40c8b70646f61cd45ef0%2F0204cca0c7114c80b24a5817adb9416b"
               alt="Lighting"
               className="w-full h-48 object-cover rounded-lg shadow-lg"
             />
             <img
-              src="/placeholder.svg?key=expert-4"
+              src="https://cdn.builder.io/api/v1/image/assets%2F39ae946dc8af40c8b70646f61cd45ef0%2Fec6c218f1d534cd2899d6f9dc8afeef3"
               alt="Atmosphere"
               className="w-full h-48 object-cover rounded-lg shadow-lg"
+              style={{
+                backgroundImage: 'url("https://cdn.builder.io/api/v1/image/assets%2F39ae946dc8af40c8b70646f61cd45ef0%2Fec6c218f1d534cd2899d6f9dc8afeef3")',
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+              }}
             />
           </div>
         </div>
