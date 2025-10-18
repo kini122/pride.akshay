@@ -99,6 +99,7 @@ const HoverButton = React.forwardRef<HTMLButtonElement, HoverButtonProps>(
         )}
         style={{
           WebkitTapHighlightColor: "transparent",
+          backdropFilter: "orange(16px)",
           // CSS variables for circle gradient
           // default values; can be overridden via Tailwind variables
           // @ts-ignore
