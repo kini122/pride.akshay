@@ -68,7 +68,8 @@ export function ExpertPlanning() {
               display: "grid",
               fontWeight: "400",
               gap: "16px",
-              gridTemplate: "none / repeat(2, minmax(0px, 1fr))",
+              gridTemplateColumns: "1fr 1.5fr",
+              gridTemplateRows: "auto auto",
               paddingTop: "198px",
             }}
           >
@@ -115,6 +116,7 @@ export function ExpertPlanning() {
                 height: "192px",
                 objectFit: "cover",
                 width: "100%",
+                gridColumn: "span 2",
               }}
             />
             <img
