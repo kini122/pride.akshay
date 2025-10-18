@@ -1,11 +1,12 @@
 import Link from "next/link"
 import { Facebook, Instagram, Youtube, Phone, Mail, ArrowUp } from "lucide-react"
+import { TextHoverEffect, FooterBackgroundGradient } from "@/components/ui/hover-footer"
 
 export function Footer() {
   return (
-    <footer className="bg-[#F9FAFB]">
-      <div className="mx-auto max-w-[1300px] px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-[70px] mb-8">
+    <footer className="bg-[#0F0F11]/10 relative h-fit rounded-3xl overflow-hidden m-8">
+      <div className="max-w-7xl mx-auto p-14 z-40 relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8 lg:gap-16 pb-12">
           {/* Column 1 - Company Info */}
           <div>
             <div className="flex items-center gap-3">
@@ -103,21 +104,36 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-[#E5E7EB] pt-6">
-          <div className="flex items-center justify-between text-[14px] text-[#6B7280]">
-            <span>© Pride Eventz 2025</span>
-            <span>Kochi, Kerala</span>
-            <a
-              href="#"
-              aria-label="Back to top"
-              className="inline-flex items-center justify-center h-8 w-8 rounded-full border border-[#D1D5DB] text-[#6B7280] transition-transform hover:-translate-y-0.5"
-            >
-              <ArrowUp className="h-4 w-4" />
+        <hr className="border-t border-gray-700 my-8" />
+
+        {/* Footer bottom */}
+        <div className="flex flex-col md:flex-row justify-between items-center text-sm space-y-4 md:space-y-0">
+          {/* Social icons */}
+          <div className="flex space-x-6 text-gray-400">
+            <a href="#" aria-label="Facebook" className="hover:text-[#3ca2fa] transition-colors">
+              <Facebook size={20} />
+            </a>
+            <a href="#" aria-label="Youtube" className="hover:text-[#3ca2fa] transition-colors">
+              <Youtube size={20} />
+            </a>
+            <a href="#" aria-label="Instagram" className="hover:text-[#3ca2fa] transition-colors">
+              <Instagram size={20} />
             </a>
           </div>
+
+          {/* Copyright */}
+          <p className="text-center md:text-left">
+            &copy; {new Date().getFullYear()} Pride Eventz. All rights reserved.
+          </p>
         </div>
       </div>
+
+      {/* Text hover effect */}
+      <div className="lg:flex hidden h-[30rem] -mt-52 -mb-36">
+        <TextHoverEffect text="Pride" className="z-50" />
+      </div>
+
+      <FooterBackgroundGradient />
     </footer>
   )
 }
