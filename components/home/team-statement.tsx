@@ -23,17 +23,12 @@ export function TeamStatement() {
           </div>
 
           {/* Right Column - Images */}
-          <div className="grid grid-cols-2 gap-4">
-            <img
-              src="/santa-party-decoration-event.jpg"
-              alt="Party decoration"
-              className="w-full h-64 object-cover rounded-lg shadow-lg"
-            />
-            <img
-              src="/exhibition-trade-show-atomfrost.jpg"
-              alt="Exhibition"
-              className="w-full h-64 object-cover rounded-lg shadow-lg"
-            />
+          <div className="flex items-center justify-center">
+            {/* Infinite horizontal image scroller with arrows */}
+            <div className="w-full max-w-2xl">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <DynamicScroller />
+            </div>
           </div>
         </div>
       </div>
