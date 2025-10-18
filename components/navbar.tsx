@@ -59,6 +59,7 @@ export function Navbar() {
               <li>
                 <Link
                   href="/"
+                  prefetch={false}
                   className={`transition-all duration-300 relative pb-1 ${
                     isActive("/")
                       ? "text-white after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-white"
@@ -71,6 +72,7 @@ export function Navbar() {
               <li>
                 <Link
                   href="/about"
+                  prefetch={false}
                   className={`transition-all duration-300 relative pb-1 ${
                     isActive("/about")
                       ? "text-white after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-white"
@@ -109,6 +111,7 @@ export function Navbar() {
               <li>
                 <Link
                   href="/gallery"
+                  prefetch={false}
                   className={`transition-all duration-300 relative pb-1 ${
                     isActive("/gallery")
                       ? "text-white after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-white"
@@ -121,6 +124,7 @@ export function Navbar() {
               <li>
                 <Link
                   href="/clients"
+                  prefetch={false}
                   className={`transition-all duration-300 relative pb-1 ${
                     isActive("/clients")
                       ? "text-white after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-white"
@@ -133,6 +137,7 @@ export function Navbar() {
               <li>
                 <Link
                   href="/contact"
+                  prefetch={false}
                   className={`transition-all duration-300 relative pb-1 ${
                     isActive("/contact")
                       ? "text-white after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-white"
