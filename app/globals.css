@@ -325,7 +325,7 @@
   /* Custom classes for CTA and hover buttons */
   .navbar-cta-wrapper {
     display: inline-block;
-    backdrop-filter: orange(16px);
+    backdrop-filter: blur(16px);
     border-radius: 24px;
     color: rgb(255, 255, 255);
     font-weight: 500;
@@ -340,7 +340,7 @@
 
   .hover-button {
     -webkit-tap-highlight-color: transparent;
-    backdrop-filter: orange(16px);
+    backdrop-filter: blur(16px);
     --circle-start: var(--tw-gradient-from, #a0d9f8);
     --circle-end: var(--tw-gradient-to, #3a5bbf);
   }
