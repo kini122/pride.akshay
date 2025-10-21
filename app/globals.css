@@ -23,7 +23,7 @@
   --muted: oklch(0.95 0 0);
   --muted-foreground: oklch(0.5 0 0);
   --destructive: #CB691E;
-  --destructive-foreground: oklch(1 0 0);
+  --destructive-foreground: #CB691E;
   --border: oklch(0.92 0 0);
   --input: oklch(0.98 0 0);
   --ring: #CB691E;
