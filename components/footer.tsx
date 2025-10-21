@@ -13,7 +13,7 @@ export function Footer() {
   }, [])
 
   return (
-    <footer className="bg-[#F97316] relative h-fit rounded-3xl overflow-hidden m-8">
+    <footer className="bg-[#CB691E] relative h-fit rounded-3xl overflow-hidden m-8">
       <div className="max-w-7xl mx-auto p-14 z-40 relative">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8 lg:gap-16 pb-12">
           {/* Column 1 - Company Info */}
@@ -111,7 +111,7 @@ export function Footer() {
           </div>
         </div>
 
-        <hr className="border-t border-[#D97706] my-8" />
+        <hr className="border-t border-[#CB691E] my-8" />
 
         {/* Footer bottom */}
         <div className="flex flex-col md:flex-row justify-between items-center text-sm space-y-4 md:space-y-0">
@@ -136,7 +136,7 @@ export function Footer() {
       </div>
 
       {/* Text hover effect */}
-      <div className="lg:flex hidden h-[30rem] -mt-52 -mb-36 pointer-events-none" style={{ zIndex: -10 }}>
+      <div className="lg:flex hidden h-[30rem] -mt-52 -mb-36 pointer-events-none footer-text-hover">
         <TextHoverEffect text="Pride" className="" />
       </div>
 
