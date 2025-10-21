@@ -53,7 +53,7 @@ export const TextHoverEffect = ({
         >
           {hovered && (
             <>
-              <stop offset="0%" stopColor="#eab308" />
+              <stop offset="0%" stopColor="#CB691E" />
               <stop offset="25%" stopColor="#ef4444" />
               <stop offset="50%" stopColor="#80eeb4" />
               <stop offset="75%" stopColor="#06b6d4" />
