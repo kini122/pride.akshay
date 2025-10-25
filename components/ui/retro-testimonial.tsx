@@ -122,7 +122,7 @@ const Carousel = ({ items, initialScroll = 0 }: iCarouselProps) => {
   return (
     <div className="relative w-full mt-10">
       <div
-        className="flex w-full overflow-x-scroll overscroll-x-auto scroll-smooth [scrollbar-width:none] py-5"
+        className="flex w-full overflow-x-scroll overscroll-x-auto scroll-smooth [scrollbar-width:none] py-5 justify-start items-start"
         ref={carouselRef}
         onScroll={checkScrollability}
         onMouseEnter={() => setIsHovered(true)}
