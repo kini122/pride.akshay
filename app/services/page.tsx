@@ -57,7 +57,7 @@ const serviceData = [
     index: 5,
     name: "Exhibitions",
     href: "/services/exhibitions",
-    image: "/placeholder.svg",
+    image: "https://cdn.builder.io/api/v1/image/assets%2F2bdfb75c4a42464ea64f680845f3e793%2Fddd51d464eb140a5b60b249efe1f5e26",
     desc:
       "Make your mark at exhibitions and trade shows. We design and execute captivating booths and displays that attract visitors, showcase your offerings, and maximize engagement.",
   },
