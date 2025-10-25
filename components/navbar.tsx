@@ -23,11 +23,11 @@ export function Navbar() {
   }, [])
 
   const services = [
+    { name: "All Services", href: "/services" },
     { name: "Corporate Events", href: "/services/corporate" },
     { name: "Promotions", href: "/services/promotions" },
     { name: "Exhibitions", href: "/services/exhibitions" },
     { name: "Private Parties", href: "/services/private-parties" },
-    { name: "Weddings", href: "/services/weddings" },
   ]
 
   const isActive = (href: string) => pathname === href
