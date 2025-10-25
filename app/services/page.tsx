@@ -18,7 +18,9 @@ export default function ServicesPage() {
   const router = useRouter()
 
   return (
-    <main>
+    <>
+      <Navbar />
+      <main>
       {/* Hero */}
       <section className="services-hero" aria-label="Services hero" style={{ backgroundImage: `url('/placeholder.svg')` }}>
         <div className="services-hero-overlay" />
@@ -108,5 +110,7 @@ export default function ServicesPage() {
         </div>
       </section>
     </main>
+      <Footer />
+    </>
   )
 }
