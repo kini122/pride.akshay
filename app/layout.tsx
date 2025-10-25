@@ -22,7 +22,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} font-sans antialiased`}>
-        <Script id="safe-fetch" strategy="beforeInteractive">{`(function(){try{const native=window.fetch && window.fetch.bind(window); if(!native) return; window.__nativeFetch = native; window.fetch = function(){ try{ return native.apply(this, arguments); } catch(e) { try{ console.warn('Wrapped fetch failed:', e); return Promise.resolve(new Response(null, { status: 204 })); }catch(err){ return Promise.resolve({ ok: false, status: 204, text: ()=>Promise.resolve('') }); } } }; }catch(e){ console.warn('Safe fetch init failed', e);} })()`}</Script>
+        <Script id="safe-fetch" strategy="beforeInteractive">{`(function(){try{const native=window.fetch && window.fetch.bind(window); if(!native) return; window.__nativeFetch = native; window.fetch = function(){ try{ return native.apply(this, arguments); } catch(e) { try{ console.warn('Wrapped fetch failed:', e); return Promise.resolve(new Response(null, { status: 204 })); }catch(err){ return Promise.resolve({ ok: false, status: 204, text: ()=>Promise.resolve('') }); } } }; // global handlers to suppress noisy third-party errors
+  window.addEventListener('error', function(ev){ try{ if(ev && ev.filename && (ev.filename.includes('fullstory') || ev.filename.includes('edge.fullstory'))) { ev.preventDefault && ev.preventDefault(); return false; } }catch(e){} }, true);
+  window.addEventListener('unhandledrejection', function(ev){ try{ var reason = ev && ev.reason && (ev.reason.stack || ev.reason.message || ''); if(reason && (reason.indexOf && (reason.indexOf('fullstory') !== -1 || reason.indexOf('edge.fullstory') !== -1))) { ev.preventDefault && ev.preventDefault(); return false; } }catch(e){} }, true);
+ }catch(e){ console.warn('Safe fetch init failed', e);} })()`}</Script>
         {children}
         <ScrollToTop />
         <Analytics />
