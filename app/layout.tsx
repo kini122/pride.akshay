@@ -22,8 +22,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} font-sans antialiased`}>
-        <Script id="store-native-fetch" strategy="beforeInteractive">{`(function(){try{if(window.fetch){window.__nativeFetch=window.fetch.bind(window);} }catch(e){}})()`}</Script>
-        <Script id="restore-native-fetch" strategy="afterInteractive">{`(function(){try{const native=window.__nativeFetch; if(!native) return; if(window.fetch!==native){window.fetch=function(){try{return native.apply(this,arguments);}catch(e){return native.apply(this,arguments);}};}}catch(e){}})()`}</Script>
         {children}
         <ScrollToTop />
         <Analytics />
