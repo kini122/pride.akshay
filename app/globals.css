@@ -391,7 +391,8 @@
 
   .service-desc { color: rgba(255,255,255,0.75); font-size: 0.95rem; margin-bottom: 0.75rem; flex: 1 1 auto; }
 
-  .service-cta { margin-top: auto; align-self: flex-start; background: var(--color-primary); color: white; padding: 0.45rem 0.75rem; border-radius: 8px; font-weight: 600; text-decoration: none; }
+  .service-cta { margin-top: auto; align-self: flex-start; background: var(--color-primary); color: var(--color-primary-foreground); padding: 0.75rem 1rem; border-radius: 6px; font-weight: 600; text-decoration: none; display: inline-block; transition: transform 0.2s ease, background 0.15s ease, box-shadow 0.15s ease; }
+  .service-cta:hover { background: var(--color-secondary); transform: scale(1.03); box-shadow: 0 6px 20px rgba(254,141,1,0.2); }
 
   /* Redesigned Services page styles */
   .services-hero {
@@ -411,8 +412,8 @@
   .hero-title { font-size: 48px; line-height: 1.1; letter-spacing: -0.02em; font-weight: 700; margin: 0; }
   @media (min-width: 1024px) { .hero-title { font-size: 64px; } }
   .hero-sub { margin-top: 12px; color: rgba(255,255,255,0.9); font-size: 18px; }
-  .hero-cta { position: absolute; top: 24px; right: 40px; border: 2px solid rgba(255,255,255,0.9); background: transparent; color: #fff; padding: 12px 28px; border-radius: 24px; cursor: pointer; transition: background 0.25s ease, color 0.25s ease; }
-  .hero-cta:hover { background: rgba(255,255,255,0.08); }
+  .hero-cta { position: absolute; top: 24px; right: 40px; border: 2px solid var(--primary); background: transparent; color: var(--primary); padding: 12px 28px; border-radius: 24px; cursor: pointer; transition: background 0.25s ease, color 0.25s ease, transform 0.15s ease; }
+  .hero-cta:hover { background: var(--primary); color: var(--primary-foreground); transform: scale(1.02); }
 
   .services-ticker { background: #000; color: #fff; overflow: hidden; }
   .ticker-track { display: flex; gap: 40px; padding: 16px 0; align-items: center; animation: ticker 18s linear infinite; }
