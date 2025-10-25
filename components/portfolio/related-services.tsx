@@ -73,7 +73,7 @@ export function RelatedServices() {
                 style={{ ['--service-delay']: `${index * 100}ms` }}
               >
                 {/* Icon */}
-                <div className="mb-6 inline-block p-4 bg-primary/10 rounded-lg group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                <div className="mb-6 inline-block p-4 related-service-icon-bg rounded-lg group-hover:scale-110 transition-all duration-300">
                   <Icon className="w-6 h-6 text-primary group-hover:text-white transition-colors" />
                 </div>
 
