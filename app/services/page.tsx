@@ -204,7 +204,7 @@ export default function ServicesPage() {
                       <h3 id="featured-heading" style={{ margin: 0, fontSize: 22, fontWeight: 700, color: '#1a1a1a' }}>{current.name}</h3>
                       <p style={{ color: '#666666', marginTop: 12, fontSize: 15, lineHeight: 1.65 }}>{current.desc}</p>
                       <div style={{ marginTop: 18 }}>
-                        <Link href={current.href} className="service-cta" prefetch={false}>View service</Link>
+                        <a href={current.href} className="service-cta">View service</a>
                       </div>
                     </motion.aside>
                   </AnimatePresence>
