@@ -128,7 +128,7 @@ export function StatsSection() {
         playsInline
         poster="/placeholder.svg?key=stats-bg"
       >
-        <source src="https://www.pexels.com/video/a-free-live-concert-in-celebration-of-an-event-4916813/" type="video/mp4" />
+        <source src="https://www.pexels.com/download/video/4916813/" type="video/mp4" />
         {/* Fallback image */}
       </video>
 
