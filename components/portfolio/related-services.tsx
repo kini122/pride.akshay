@@ -67,10 +67,10 @@ export function RelatedServices() {
               <div
                 key={index}
                 data-index={index}
-                className={`group p-8 bg-white border border-gray-200 rounded-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300 ${
+                className={`related-service-card group p-8 border border-gray-200 rounded-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300 ${
                   visibleItems[index] ? "animate-fade-in-up" : "opacity-0"
                 }`}
-                style={{ animationDelay: `${index * 100}ms` }}
+                style={{ ['--service-delay']: `${index * 100}ms` }}
               >
                 {/* Icon */}
                 <div className="mb-6 inline-block p-4 bg-primary/10 rounded-lg group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
