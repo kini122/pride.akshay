@@ -48,7 +48,7 @@ const serviceData = [
     index: 4,
     name: "Post Events",
     href: "/services/post-events",
-    image: "/placeholder.svg",
+    image: "https://cdn.builder.io/api/v1/image/assets%2F2bdfb75c4a42464ea64f680845f3e793%2F6480fe7190494ef5aeea8bb11fd7f63c",
     desc:
       "Extend the magic beyond the main event. Our post-event services ensure seamless transitions, memorable afterparties, and comprehensive wrap-up management for complete satisfaction.",
   },
