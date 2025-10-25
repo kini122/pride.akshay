@@ -13,7 +13,7 @@ export function Footer() {
   }, [])
 
   return (
-    <footer className="relative h-fit rounded-3xl overflow-hidden m-8" style={{ background: 'var(--color-primary)' }}>
+    <footer className="relative h-fit rounded-3xl overflow-hidden m-8" style={{ background: '#FFFFFF', borderTop: '1px solid #E5E5E5' }}>
       <div className="max-w-7xl mx-auto p-14 z-40 relative">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8 lg:gap-16 pb-12">
           {/* Column 1 - Company Info */}
@@ -111,7 +111,7 @@ export function Footer() {
           </div>
         </div>
 
-        <hr className="border-t my-8" style={{ borderTopColor: 'var(--color-primary)' }} />
+        <hr className="border-t my-8" style={{ borderTopColor: '#E5E5E5' }} />
 
         {/* Footer bottom */}
         <div className="flex flex-col md:flex-row justify-between items-center text-sm space-y-4 md:space-y-0">

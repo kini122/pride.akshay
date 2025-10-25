@@ -4,34 +4,34 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Updated color palette for Pride Eventz - orange and white theme */
-  --background: #FFD8B2;
-  --foreground: oklch(0.08 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.08 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.08 0 0);
+  /* Updated color palette for Pride Eventz - clean white and black theme */
+  --background: #FFFFFF;
+  --foreground: #1A1A1A;
+  --card: #FFFFFF;
+  --card-foreground: #1A1A1A;
+  --popover: #FFFFFF;
+  --popover-foreground: #1A1A1A;
 
-  /* Orange accent colors */
-  --primary: #FE8D01; /* Primary Orange - CTAs */
-  --primary-foreground: #ffffff;
-  --secondary: #FFA53F; /* Vibrant Orange - hover */
-  --secondary-foreground: #ffffff;
-  --accent: #FFB668; /* Soft Orange - accents */
-  --accent-foreground: #1a1a1a;
+  /* Black and gray accent colors */
+  --primary: #1A1A1A; /* Primary Black - CTAs */
+  --primary-foreground: #FFFFFF;
+  --secondary: #333333; /* Dark Gray - hover */
+  --secondary-foreground: #FFFFFF;
+  --accent: #F5F5F5; /* Light Gray - accents */
+  --accent-foreground: #1A1A1A;
 
-  --muted: #FFC78F; /* Light Peach - subtle backgrounds/cards */
-  --muted-foreground: #1a1a1a;
-  --destructive: #FE8D01;
-  --destructive-foreground: #ffffff;
-  --border: #FFB668;
-  --input: #FFD8B2;
-  --ring: #FE8D01;
-  --chart-1: #FE8D01;
-  --chart-2: #FFA53F;
-  --chart-3: #FFB668;
-  --chart-4: #FFC78F;
-  --chart-5: #FFD8B2;
+  --muted: #F9F9F9; /* Very light gray - subtle backgrounds/cards */
+  --muted-foreground: #666666;
+  --destructive: #D32F2F;
+  --destructive-foreground: #FFFFFF;
+  --border: #E5E5E5;
+  --input: #FFFFFF;
+  --ring: #999999;
+  --chart-1: #1A1A1A;
+  --chart-2: #333333;
+  --chart-3: #666666;
+  --chart-4: #999999;
+  --chart-5: #CCCCCC;
   --radius: 0.625rem;
   --sidebar: oklch(1 0 0);
   --sidebar-foreground: oklch(0.08 0 0);
@@ -44,38 +44,38 @@
 }
 
 .dark {
-  --background: #FFE8D6;
-  --foreground: oklch(0.98 0 0);
-  --card: oklch(0.15 0 0);
-  --card-foreground: oklch(0.98 0 0);
-  --popover: oklch(0.15 0 0);
-  --popover-foreground: oklch(0.98 0 0);
-  --primary: #FE8D01;
-  --primary-foreground: oklch(0.1 0 0);
-  --secondary: oklch(0.2 0 0);
-  --secondary-foreground: oklch(0.98 0 0);
-  --muted: oklch(0.3 0 0);
-  --muted-foreground: oklch(0.7 0 0);
-  --accent: var(--accent);
-  --accent-foreground: oklch(0.1 0 0);
-  --destructive: var(--destructive);
-  --destructive-foreground: var(--destructive-foreground);
-  --border: oklch(0.25 0 0);
-  --input: oklch(0.2 0 0);
-  --ring: var(--ring);
-  --chart-1: var(--chart-1);
-  --chart-2: var(--chart-2);
-  --chart-3: var(--chart-3);
-  --chart-4: var(--chart-4);
-  --chart-5: var(--chart-5);
-  --sidebar: oklch(0.12 0 0);
-  --sidebar-foreground: oklch(0.98 0 0);
-  --sidebar-primary: var(--primary);
-  --sidebar-primary-foreground: oklch(0.98 0 0);
-  --sidebar-accent: oklch(0.2 0 0);
-  --sidebar-accent-foreground: oklch(0.98 0 0);
-  --sidebar-border: oklch(0.25 0 0);
-  --sidebar-ring: var(--ring);
+  --background: #1A1A1A;
+  --foreground: #FFFFFF;
+  --card: #2D2D2D;
+  --card-foreground: #FFFFFF;
+  --popover: #2D2D2D;
+  --popover-foreground: #FFFFFF;
+  --primary: #FFFFFF;
+  --primary-foreground: #1A1A1A;
+  --secondary: #E5E5E5;
+  --secondary-foreground: #1A1A1A;
+  --muted: #333333;
+  --muted-foreground: #CCCCCC;
+  --accent: #404040;
+  --accent-foreground: #FFFFFF;
+  --destructive: #FF5252;
+  --destructive-foreground: #FFFFFF;
+  --border: #404040;
+  --input: #2D2D2D;
+  --ring: #666666;
+  --chart-1: #FFFFFF;
+  --chart-2: #E5E5E5;
+  --chart-3: #CCCCCC;
+  --chart-4: #999999;
+  --chart-5: #666666;
+  --sidebar: #1A1A1A;
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-primary: #FFFFFF;
+  --sidebar-primary-foreground: #1A1A1A;
+  --sidebar-accent: #404040;
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: #404040;
+  --sidebar-ring: #666666;
 }
 
 @theme inline {
@@ -133,7 +133,7 @@
 
 /* Added custom animations for Pride Eventz */
 @layer utilities {
-  /* Override utility bg-white to match theme background (pale cream) */
+  /* Override utility bg-white to match theme background (white) */
   .bg-white { background-color: var(--color-background) !important; }
   @keyframes fadeInUp {
     from {
@@ -160,10 +160,10 @@
   @keyframes pulse-glow {
     0%,
     100% {
-      box-shadow: 0 0 0 0 rgba(203, 105, 30, 0.7);
+      box-shadow: 0 0 0 0 rgba(26, 26, 26, 0.7);
     }
     50% {
-      box-shadow: 0 0 0 10px rgba(203, 105, 30, 0);
+      box-shadow: 0 0 0 10px rgba(26, 26, 26, 0);
     }
   }
 
@@ -317,12 +317,12 @@
 
   /* CTA overlay color */
   .cta-overlay {
-    background-color: rgba(255, 141, 33, 1);
+    background-color: rgba(0, 0, 0, 0.6);
   }
 
   /* Testimonial background */
   .testimonial-bg {
-    background-color: rgba(255, 183, 107, 1);
+    background-color: #F9F9F9;
   }
 
   .process-circle {
@@ -384,19 +384,27 @@
   /* Services page layout */
   /* Related services cards theme */
   .related-service-card {
-    background-color: rgba(255, 183, 107, 1);
-    border-width: 0.8px;
+    background-color: #FFFFFF;
+    border: 1px solid #E5E5E5;
     border-radius: 10px;
     padding: 32px;
     transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), box-shadow 0.3s cubic-bezier(0.4,0,0.2,1), background-color 0.3s cubic-bezier(0.4,0,0.2,1);
   }
+  .related-service-card:hover {
+    border-color: #D0D0D0;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+  }
   .related-service-card .related-service-icon-bg {
     display: inline-block;
-    background-color: rgba(255, 216, 178, 1);
+    background-color: #F5F5F5;
     border-radius: 10px;
     margin-bottom: 24px;
     padding: 16px;
     transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), background-color 0.3s cubic-bezier(0.4,0,0.2,1);
+  }
+  .related-service-card:hover .related-service-icon-bg {
+    background-color: #ECECEC;
   }
   .related-service-card.animate-fade-in-up { animation-delay: var(--service-delay, 0ms); }
 
@@ -470,7 +478,7 @@
   .ticker-item { font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap; padding-right: 8px; }
   @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-  .services-main { background: #FFD8B2; padding: 80px 40px; }
+  .services-main { background: #FFFFFF; padding: 80px 40px; }
   .services-container { max-width: 1200px; margin: 0 auto; display: flex; gap: 40px; align-items: flex-start; }
   .services-left { width: 45%; }
   .services-right { width: 55%; margin-top: 40px; position: relative; }
@@ -487,11 +495,11 @@
   .featured-image-wrap { position: relative; }
   .featured-image { width: 100%; height: 600px; object-fit: cover; display: block; box-shadow: 0 20px 60px rgba(0,0,0,0.15); }
 
-  .featured-card { position: absolute; left: -60px; bottom: -40px; width: 400px; background: #FFC78F; padding: 32px; box-shadow: 0 8px 32px rgba(0,0,0,0.12); border-radius: 0; z-index: 2; }
-  .featured-card h3 { margin: 0 0 12px 0; font-size: 22px; font-weight: 700; color: #1a1a1a; }
-  .featured-card p { color: #1a1a1a; font-size: 15px; line-height: 1.6; margin-bottom: 16px; }
+  .featured-card { position: absolute; left: -60px; bottom: -40px; width: 400px; background: #FFFFFF; border: 1px solid #E5E5E5; padding: 32px; box-shadow: 0 8px 32px rgba(0,0,0,0.12); border-radius: 0; z-index: 2; }
+  .featured-card h3 { margin: 0 0 12px 0; font-size: 22px; font-weight: 700; color: #1A1A1A; }
+  .featured-card p { color: #666666; font-size: 15px; line-height: 1.6; margin-bottom: 16px; }
 
-  .why-choose { background: #FFD8B2; padding: 100px 40px; }
+  .why-choose { background: #FAFAFA; padding: 100px 40px; }
   .why-inner { max-width: 1200px; margin: 0 auto; text-align: center; }
   .why-inner h2 { font-size: 44px; margin-bottom: 20px; color: #1a1a1a; }
   .why-sub { max-width: 720px; margin: 0 auto 60px auto; color: #666666; font-size: 16px; line-height: 1.7; }
