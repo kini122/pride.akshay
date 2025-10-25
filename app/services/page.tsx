@@ -39,7 +39,7 @@ const serviceData = [
     index: 3,
     name: "Brand Promotions",
     href: "/services/promotions",
-    image: "/placeholder.svg",
+    image: "https://cdn.builder.io/api/v1/image/assets%2F2bdfb75c4a42464ea64f680845f3e793%2Fe1da8ce475ee40cfa59dd56c139972da",
     desc:
       "Elevate your brand presence with impactful promotional events. We craft experiential campaigns that engage audiences, build brand awareness, and drive meaningful customer connections.",
   },
