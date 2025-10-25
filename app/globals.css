@@ -298,6 +298,36 @@
   .process-circle {
     position: relative;
     overflow: hidden;
+  }
+
+  /* Portfolio overlay image */
+  .portfolio-overlay {
+    background-image: url('https://cdn.builder.io/api/v1/image/assets%2F2bdfb75c4a42464ea64f680845f3e793%2Fac094733aeab42a88657e5786a2d4c80');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: transparent;
+    transition: color 0.3s cubic-bezier(0.4,0,0.2,1), background-color 0.3s cubic-bezier(0.4,0,0.2,1), border-color 0.3s cubic-bezier(0.4,0,0.2,1);
+  }
+
+  /* Portfolio item animation delay via CSS variable */
+  .portfolio-item.animate-fade-in-up {
+    animation-delay: var(--portfolio-delay, 0ms);
+  }
+
+  /* CTA overlay color */
+  .cta-overlay {
+    background-color: rgba(255, 141, 33, 1);
+  }
+
+  /* Testimonial background */
+  .testimonial-bg {
+    background-color: rgba(255, 183, 107, 1);
+  }
+
+  .process-circle {
+    position: relative;
+    overflow: hidden;
     transition: box-shadow 0.35s ease, transform 0.35s ease;
   }
   .process-circle::before {
