@@ -478,7 +478,7 @@
   .ticker-item { font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap; padding-right: 8px; }
   @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-  .services-main { background: #FFD8B2; padding: 80px 40px; }
+  .services-main { background: #FFFFFF; padding: 80px 40px; }
   .services-container { max-width: 1200px; margin: 0 auto; display: flex; gap: 40px; align-items: flex-start; }
   .services-left { width: 45%; }
   .services-right { width: 55%; margin-top: 40px; position: relative; }
