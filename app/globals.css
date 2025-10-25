@@ -436,9 +436,9 @@
   .featured-image-wrap { position: relative; }
   .featured-image { width: 100%; height: 600px; object-fit: cover; display: block; box-shadow: 0 20px 60px rgba(0,0,0,0.15); }
 
-  .featured-card { position: absolute; left: -60px; bottom: -40px; width: 400px; background: #fff; padding: 32px; box-shadow: 0 8px 32px rgba(0,0,0,0.12); border-radius: 0; z-index: 2; }
+  .featured-card { position: absolute; left: -60px; bottom: -40px; width: 400px; background: #FFC78F; padding: 32px; box-shadow: 0 8px 32px rgba(0,0,0,0.12); border-radius: 0; z-index: 2; }
   .featured-card h3 { margin: 0 0 12px 0; font-size: 22px; font-weight: 700; color: #1a1a1a; }
-  .featured-card p { color: #666666; font-size: 15px; line-height: 1.6; margin-bottom: 16px; }
+  .featured-card p { color: #1a1a1a; font-size: 15px; line-height: 1.6; margin-bottom: 16px; }
 
   .why-choose { background: #f9f9f9; padding: 100px 40px; }
   .why-inner { max-width: 1200px; margin: 0 auto; text-align: center; }
