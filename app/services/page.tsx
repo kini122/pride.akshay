@@ -2,6 +2,8 @@
 
 import Link from "next/link"
 import { useRouter } from "next/navigation"
+import { Navbar } from "@/components/navbar"
+import { Footer } from "@/components/footer"
 
 const services = [
   { key: "weddings", name: "Weddings", href: "/services/weddings", image: "/placeholder.svg", desc: "Your dream wedding deserves a perfect setting! We create unforgettable moments with elegant décor, seamless coordination, and personalized touches." },
