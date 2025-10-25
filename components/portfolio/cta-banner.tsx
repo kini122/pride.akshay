@@ -4,7 +4,7 @@ import Link from "next/link"
 
 export function CTABanner() {
   return (
-    <section className="relative py-20 px-4 bg-gradient-to-r from-primary to-orange-500 overflow-hidden">
+    <section className="relative py-20 px-4 bg-gradient-to-r from-gray-900 to-black overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 opacity-10 cta-overlay">
         <div className="absolute top-10 left-10 w-32 h-32 bg-white rounded-full blur-3xl animate-pulse" />
@@ -19,13 +19,13 @@ export function CTABanner() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             href="/services/corporate"
-            className="px-8 py-3 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors"
+            className="px-8 py-3 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
           >
             View Services
           </Link>
           <Link
             href="/contact"
-            className="px-8 py-3 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors"
+            className="px-8 py-3 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
           >
             Contact Us
           </Link>
