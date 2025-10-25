@@ -22,10 +22,27 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} font-sans antialiased`}>
-        <Script id="safe-fetch" strategy="beforeInteractive">{`(function(){try{const native=window.fetch && window.fetch.bind(window); if(!native) return; window.__nativeFetch = native; window.fetch = function(){ try{ return native.apply(this, arguments); } catch(e) { try{ console.warn('Wrapped fetch failed:', e); return Promise.resolve(new Response(null, { status: 204 })); }catch(err){ return Promise.resolve({ ok: false, status: 204, text: ()=>Promise.resolve('') }); } } }; // global handlers to suppress noisy third-party errors
+        <Script id="safe-fetch" strategy="beforeInteractive">{`(function(){try{ // preserve original fetch
+  var originalFetch = window.fetch;
+  if(!originalFetch) return;
+  window.__nativeFetch = originalFetch.bind(window);
+  // safe wrapper that catches sync and async errors
+  var safeFetch = function(){
+    try{
+      var p = window.__nativeFetch.apply(this, arguments);
+      if(p && typeof p.then === 'function'){
+        return p.catch(function(e){ console.warn('fetch promise rejected', e); try{ return new Response(null, { status: 204 }); }catch(err){ return Promise.resolve({ ok:false, status:204, text:function(){return Promise.resolve('')} }); } });
+      }
+      return p;
+    }catch(e){ console.warn('fetch sync error', e); try{ return Promise.resolve(new Response(null, { status: 204 })); }catch(err){ return Promise.resolve({ ok:false, status:204, text:function(){return Promise.resolve('')} }); } }
+  };
+  try{
+    Object.defineProperty(window, 'fetch', { value: safeFetch, writable: false, configurable: false });
+  }catch(e){ try{ window.fetch = safeFetch; }catch(err){} }
+  // global handlers to suppress noisy third-party errors
   window.addEventListener('error', function(ev){ try{ if(ev && ev.filename && (ev.filename.includes('fullstory') || ev.filename.includes('edge.fullstory'))) { ev.preventDefault && ev.preventDefault(); return false; } }catch(e){} }, true);
   window.addEventListener('unhandledrejection', function(ev){ try{ var reason = ev && ev.reason && (ev.reason.stack || ev.reason.message || ''); if(reason && (reason.indexOf && (reason.indexOf('fullstory') !== -1 || reason.indexOf('edge.fullstory') !== -1))) { ev.preventDefault && ev.preventDefault(); return false; } }catch(e){} }, true);
- }catch(e){ console.warn('Safe fetch init failed', e);} })()`}</Script>
+}catch(e){ console.warn('Safe fetch init failed', e);} })()`}</Script>
         {children}
         <ScrollToTop />
         <Analytics />
