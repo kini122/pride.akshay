@@ -137,7 +137,7 @@ const Carousel = ({ items, initialScroll = 0 }: iCarouselProps) => {
         <div
           className={cn(
             "flex flex-row justify-start gap-4 pl-3",
-            "max-w-5xl mx-auto",
+            "w-full",
           )}
         >
           {items.map((item, index) => {
