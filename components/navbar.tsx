@@ -153,7 +153,7 @@ export function Navbar() {
 
           {/* CTA Button */}
           <div className="hidden sm:inline-block navbar-cta-wrapper">
-            <HoverButton className="px-2 py-1 bg-black border-black text-white hover:bg-gray-900" onClick={() => window.location.href = '/contact'}>
+            <HoverButton className="px-2 py-1 bg-transparent border-none text-white" onClick={() => window.location.href = '/contact'}>
               Let&apos;s work together
             </HoverButton>
           </div>
