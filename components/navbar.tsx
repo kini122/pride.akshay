@@ -196,13 +196,13 @@ export function Navbar() {
                 ))}
               </div>
             )}
-            <Link href="/gallery" prefetch={false} className="block px-4 py-3 text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors text-sm font-medium">
+            <Link href="/gallery" prefetch={false} className="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 transition-colors text-sm font-medium">
               Portfolio
             </Link>
-            <Link href="/clients" prefetch={false} className="block px-4 py-3 text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors text-sm font-medium">
+            <Link href="/clients" prefetch={false} className="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 transition-colors text-sm font-medium">
               Our Clients
             </Link>
-            <Link href="/contact" prefetch={false} className="block px-4 py-3 text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors text-sm font-medium">
+            <Link href="/contact" prefetch={false} className="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 transition-colors text-sm font-medium">
               Contact
             </Link>
           </div>
