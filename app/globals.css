@@ -133,7 +133,7 @@
 
 /* Added custom animations for Pride Eventz */
 @layer utilities {
-  /* Override utility bg-white to match theme background (pale cream) */
+  /* Override utility bg-white to match theme background (white) */
   .bg-white { background-color: var(--color-background) !important; }
   @keyframes fadeInUp {
     from {
