@@ -22,6 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} font-sans antialiased`}>
+        <Script id="safe-fetch" strategy="beforeInteractive">{`(function(){try{const native=window.fetch && window.fetch.bind(window); if(!native) return; window.__nativeFetch = native; window.fetch = function(){ try{ return native.apply(this, arguments); } catch(e) { try{ console.warn('Wrapped fetch failed:', e); return Promise.resolve(new Response(null, { status: 204 })); }catch(err){ return Promise.resolve({ ok: false, status: 204, text: ()=>Promise.resolve('') }); } } }; }catch(e){ console.warn('Safe fetch init failed', e);} })()`}</Script>
         {children}
         <ScrollToTop />
         <Analytics />
