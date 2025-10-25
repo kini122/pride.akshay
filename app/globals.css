@@ -13,25 +13,25 @@
   --popover-foreground: oklch(0.08 0 0);
 
   /* Orange accent colors */
-  --primary: #CB691E;
-  --primary-foreground: oklch(1 0 0);
-  --secondary: #CB691E;
-  --secondary-foreground: #CB691E;
-  --accent: #CB691E;
-  --accent-foreground: oklch(1 0 0);
+  --primary: #FE8D01; /* Primary Orange - CTAs */
+  --primary-foreground: #ffffff;
+  --secondary: #FFA53F; /* Vibrant Orange - hover */
+  --secondary-foreground: #ffffff;
+  --accent: #FFB668; /* Soft Orange - accents */
+  --accent-foreground: #1a1a1a;
 
-  --muted: oklch(0.95 0 0);
-  --muted-foreground: oklch(0.5 0 0);
-  --destructive: #CB691E;
-  --destructive-foreground: #CB691E;
-  --border: oklch(0.92 0 0);
-  --input: oklch(0.98 0 0);
-  --ring: #CB691E;
-  --chart-1: #CB691E;
-  --chart-2: #CB691E;
-  --chart-3: #CB691E;
-  --chart-4: #CB691E;
-  --chart-5: #CB691E;
+  --muted: #FFC78F; /* Light Peach - subtle backgrounds/cards */
+  --muted-foreground: #1a1a1a;
+  --destructive: #FE8D01;
+  --destructive-foreground: #ffffff;
+  --border: #FFB668;
+  --input: #FFD8B2;
+  --ring: #FE8D01;
+  --chart-1: #FE8D01;
+  --chart-2: #FFA53F;
+  --chart-3: #FFB668;
+  --chart-4: #FFC78F;
+  --chart-5: #FFD8B2;
   --radius: 0.625rem;
   --sidebar: oklch(1 0 0);
   --sidebar-foreground: oklch(0.08 0 0);
