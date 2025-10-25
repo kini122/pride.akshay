@@ -384,19 +384,27 @@
   /* Services page layout */
   /* Related services cards theme */
   .related-service-card {
-    background-color: rgba(255, 183, 107, 1);
-    border-width: 0.8px;
+    background-color: #FFFFFF;
+    border: 1px solid #E5E5E5;
     border-radius: 10px;
     padding: 32px;
     transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), box-shadow 0.3s cubic-bezier(0.4,0,0.2,1), background-color 0.3s cubic-bezier(0.4,0,0.2,1);
   }
+  .related-service-card:hover {
+    border-color: #D0D0D0;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+  }
   .related-service-card .related-service-icon-bg {
     display: inline-block;
-    background-color: rgba(255, 216, 178, 1);
+    background-color: #F5F5F5;
     border-radius: 10px;
     margin-bottom: 24px;
     padding: 16px;
     transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), background-color 0.3s cubic-bezier(0.4,0,0.2,1);
+  }
+  .related-service-card:hover .related-service-icon-bg {
+    background-color: #ECECEC;
   }
   .related-service-card.animate-fade-in-up { animation-delay: var(--service-delay, 0ms); }
 
