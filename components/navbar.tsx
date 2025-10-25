@@ -141,8 +141,8 @@ export function Navbar() {
                   prefetch={false}
                   className={`transition-all duration-300 relative pb-1 ${
                     isActive("/contact")
-                      ? "text-white after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-white"
-                      : "hover:text-white after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-white hover:after:w-full after:transition-all after:duration-300"
+                      ? "text-gray-900 after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-gray-900"
+                      : "hover:text-gray-900 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gray-900 hover:after:w-full after:transition-all after:duration-300"
                   }`}
                 >
                   Contact
