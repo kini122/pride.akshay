@@ -44,13 +44,13 @@ export function Navbar() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 text-gray-900 hover:opacity-70 transition-opacity">
+          <Link href="/" className="flex items-center gap-3 text-white hover:opacity-80 transition-opacity">
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2F6241002a28724d6b8f1149d981f5257e%2F4220e3e82a1f46b3b96e9daf8656a8a6?format=webp&width=800"
               alt="Pride Eventz Logo"
               className="h-10 w-10 object-contain"
             />
-            <span className="hidden sm:inline text-[17px] font-semibold tracking-tight text-gray-900">Pride Eventz</span>
+            <span className="hidden sm:inline text-[17px] font-semibold tracking-tight text-white">Pride Eventz</span>
           </Link>
 
           {/* Desktop Menu */}
