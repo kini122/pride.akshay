@@ -55,14 +55,14 @@ export default function ContactPage() {
 
       {/* Hero Section */}
       <section
-        className="relative w-full h-80 flex items-center justify-center overflow-hidden pt-16"
-        style={{
-          backgroundImage: 'url("/placeholder.svg?key=contact-hero")',
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="absolute inset-0 bg-black/40" />
+      className="relative w-full h-80 flex items-center justify-center overflow-hidden pt-16"
+      style={{
+        backgroundImage: 'url("https://cdn.builder.io/api/v1/image/assets%2F2bdfb75c4a42464ea64f680845f3e793%2F615a6b8f389c4b169a0137904ccfa583")',
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      <div className="absolute inset-0" style={{ backgroundImage: 'url("https://cdn.builder.io/api/v1/image/assets%2F2bdfb75c4a42464ea64f680845f3e793%2F615a6b8f389c4b169a0137904ccfa583")', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover', opacity: 0.45 }} />
         <div className="relative z-10 text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white">Get In Touch</h1>
           <p className="text-xl text-white/90 mt-4">Let's create something extraordinary together</p>
