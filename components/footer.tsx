@@ -111,7 +111,7 @@ export function Footer() {
           </div>
         </div>
 
-        <hr className="border-t border-[#CB691E] my-8" />
+        <hr className="border-t my-8" style={{ borderTopColor: 'var(--color-primary)' }} />
 
         {/* Footer bottom */}
         <div className="flex flex-col md:flex-row justify-between items-center text-sm space-y-4 md:space-y-0">
