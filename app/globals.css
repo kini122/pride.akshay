@@ -495,11 +495,11 @@
   .featured-image-wrap { position: relative; }
   .featured-image { width: 100%; height: 600px; object-fit: cover; display: block; box-shadow: 0 20px 60px rgba(0,0,0,0.15); }
 
-  .featured-card { position: absolute; left: -60px; bottom: -40px; width: 400px; background: #FFC78F; padding: 32px; box-shadow: 0 8px 32px rgba(0,0,0,0.12); border-radius: 0; z-index: 2; }
-  .featured-card h3 { margin: 0 0 12px 0; font-size: 22px; font-weight: 700; color: #1a1a1a; }
-  .featured-card p { color: #1a1a1a; font-size: 15px; line-height: 1.6; margin-bottom: 16px; }
+  .featured-card { position: absolute; left: -60px; bottom: -40px; width: 400px; background: #FFFFFF; border: 1px solid #E5E5E5; padding: 32px; box-shadow: 0 8px 32px rgba(0,0,0,0.12); border-radius: 0; z-index: 2; }
+  .featured-card h3 { margin: 0 0 12px 0; font-size: 22px; font-weight: 700; color: #1A1A1A; }
+  .featured-card p { color: #666666; font-size: 15px; line-height: 1.6; margin-bottom: 16px; }
 
-  .why-choose { background: #FFD8B2; padding: 100px 40px; }
+  .why-choose { background: #FAFAFA; padding: 100px 40px; }
   .why-inner { max-width: 1200px; margin: 0 auto; text-align: center; }
   .why-inner h2 { font-size: 44px; margin-bottom: 20px; color: #1a1a1a; }
   .why-sub { max-width: 720px; margin: 0 auto 60px auto; color: #666666; font-size: 16px; line-height: 1.7; }
