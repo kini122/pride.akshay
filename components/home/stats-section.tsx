@@ -59,22 +59,23 @@ export function StatsSection() {
     <section
       ref={sectionRef}
       className="relative py-20 px-4 overflow-hidden"
-      style={{
-        backgroundImage: 'url("/placeholder.svg?key=stats-bg")',
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
+      aria-label="Stats background video"
     >
+      {/* Background video */}
+      <video
+        className="absolute inset-0 w-full h-full object-cover"
+        autoPlay
+        muted
+        loop
+        playsInline
+        poster="/placeholder.svg?key=stats-bg"
+      >
+        <source src="https://www.pexels.com/video/a-free-live-concert-in-celebration-of-an-event-4916813/" type="video/mp4" />
+        {/* Fallback image */}
+      </video>
+
       {/* Dark overlay */}
-      <div
-        className="absolute inset-0 bg-black/50"
-        style={{
-          backgroundImage: 'url("https://cdn.builder.io/api/v1/image/assets%2F39ae946dc8af40c8b70646f61cd45ef0%2Fec6c218f1d534cd2899d6f9dc8afeef3")',
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-        }}
-      />
+      <div className="absolute inset-0 bg-black/50" />
 
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Left side text */}
