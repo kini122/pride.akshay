@@ -406,7 +406,7 @@
     color: #fff;
     overflow: hidden;
   }
-  .services-hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.35)); }
+  .services-hero-overlay { position: absolute; inset: 0; background-image: url("https://cdn.builder.io/api/v1/image/assets%2F2bdfb75c4a42464ea64f680845f3e793%2F73f944b84afe47c88adc7ba9c698af89"); background-repeat: no-repeat; background-position: center; background-size: cover; }
   .services-hero-inner { position: relative; text-align: center; max-width: 900px; z-index: 2; }
   .hero-title { font-size: 48px; line-height: 1.1; letter-spacing: -0.02em; font-weight: 700; margin: 0; }
   @media (min-width: 1024px) { .hero-title { font-size: 64px; } }
