@@ -55,7 +55,7 @@ export function Navbar() {
 
           {/* Desktop Menu */}
           <nav className="hidden md:flex items-center" aria-label="Primary">
-            <ul className="flex items-center gap-8 text-[15px] font-medium text-white/80">
+            <ul className="flex items-center gap-8 text-[15px] font-medium text-gray-600">
               <li>
                 <Link
                   href="/"
