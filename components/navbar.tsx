@@ -169,27 +169,27 @@ export function Navbar() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden pb-4 border-t border-gray-200 bg-white">
-            <Link href="/" prefetch={false} className="block px-4 py-3 text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors text-sm font-medium">
+          <div className="md:hidden pb-4 border-t border-white/10 bg-[rgba(44,62,80,0.95)]">
+            <Link href="/" prefetch={false} className="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 transition-colors text-sm font-medium">
               Home
             </Link>
-            <Link href="/about" prefetch={false} className="block px-4 py-3 text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors text-sm font-medium">
+            <Link href="/about" prefetch={false} className="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 transition-colors text-sm font-medium">
               About
             </Link>
             <button
               onClick={() => setIsServicesOpen(!isServicesOpen)}
-              className="w-full text-left px-4 py-3 text-gray-600 hover:text-gray-900 hover:bg-gray-100 flex items-center justify-between font-medium text-sm transition-colors"
+              className="w-full text-left px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 flex items-center justify-between font-medium text-sm transition-colors"
             >
               Services
               <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isServicesOpen ? "rotate-180" : ""}`} />
             </button>
             {isServicesOpen && (
-              <div className="pl-4 bg-gray-50">
+              <div className="pl-4 bg-white/5">
                 {services.map((service) => (
                   <Link
                     key={service.href}
                     href={service.href}
-                    className="block px-4 py-2.5 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors font-medium"
+                    className="block px-4 py-2.5 text-sm text-white/70 hover:text-white hover:bg-white/10 transition-colors font-medium"
                   >
                     {service.name}
                   </Link>
