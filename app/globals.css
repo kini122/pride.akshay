@@ -392,4 +392,70 @@
   .service-desc { color: rgba(255,255,255,0.75); font-size: 0.95rem; margin-bottom: 0.75rem; flex: 1 1 auto; }
 
   .service-cta { margin-top: auto; align-self: flex-start; background: var(--color-primary); color: white; padding: 0.45rem 0.75rem; border-radius: 8px; font-weight: 600; text-decoration: none; }
+
+  /* Redesigned Services page styles */
+  .services-hero {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 20px 80px;
+    color: #fff;
+    overflow: hidden;
+  }
+  .services-hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.35)); }
+  .services-hero-inner { position: relative; text-align: center; max-width: 900px; z-index: 2; }
+  .hero-title { font-size: 48px; line-height: 1.1; letter-spacing: -0.02em; font-weight: 700; margin: 0; }
+  @media (min-width: 1024px) { .hero-title { font-size: 64px; } }
+  .hero-sub { margin-top: 12px; color: rgba(255,255,255,0.9); font-size: 18px; }
+  .hero-cta { position: absolute; top: 24px; right: 40px; border: 2px solid rgba(255,255,255,0.9); background: transparent; color: #fff; padding: 12px 28px; border-radius: 24px; cursor: pointer; transition: background 0.25s ease, color 0.25s ease; }
+  .hero-cta:hover { background: rgba(255,255,255,0.08); }
+
+  .services-ticker { background: #000; color: #fff; overflow: hidden; }
+  .ticker-track { display: flex; gap: 40px; padding: 16px 0; align-items: center; animation: ticker 18s linear infinite; }
+  .ticker-item { font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap; padding-right: 8px; }
+  @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+  .services-main { background: #fff; padding: 80px 40px; }
+  .services-container { max-width: 1200px; margin: 0 auto; display: flex; gap: 40px; align-items: flex-start; }
+  .services-left { width: 45%; }
+  .services-right { width: 55%; margin-top: 40px; position: relative; }
+
+  .lead { color: #666666; font-size: 16px; line-height: 1.7; margin-bottom: 24px; }
+
+  .service-categories { display: flex; flex-direction: column; gap: 12px; margin-top: 24px; }
+  .service-list-item { display: flex; gap: 12px; align-items: center; background: transparent; border: none; padding: 8px 12px; text-align: left; cursor: pointer; transition: color 0.3s ease; color: #999999; font-size: 20px; }
+  .service-list-item:focus { outline: 3px solid rgba(203,105,30,0.2); }
+  .service-list-item--primary { color: #1a1a1a; font-weight: 700; font-size: 24px; }
+  .service-list-item:hover { color: #1a1a1a; }
+  .service-index { font-size: 12px; color: #999999; margin-right: 6px; }
+
+  .featured-image-wrap { position: relative; }
+  .featured-image { width: 100%; height: 600px; object-fit: cover; display: block; box-shadow: 0 20px 60px rgba(0,0,0,0.15); }
+
+  .featured-card { position: absolute; left: -60px; bottom: -40px; width: 400px; background: #fff; padding: 32px; box-shadow: 0 8px 32px rgba(0,0,0,0.12); border-radius: 0; z-index: 2; }
+  .featured-card h3 { margin: 0 0 12px 0; font-size: 22px; font-weight: 700; color: #1a1a1a; }
+  .featured-card p { color: #666666; font-size: 15px; line-height: 1.6; margin-bottom: 16px; }
+
+  .why-choose { background: #f9f9f9; padding: 100px 40px; }
+  .why-inner { max-width: 1200px; margin: 0 auto; text-align: center; }
+  .why-inner h2 { font-size: 44px; margin-bottom: 20px; color: #1a1a1a; }
+  .why-sub { max-width: 720px; margin: 0 auto 60px auto; color: #666666; font-size: 16px; line-height: 1.7; }
+
+  .features-grid { display: grid; grid-template-columns: repeat(1,1fr); gap: 40px; }
+  @media (min-width: 768px) { .features-grid { grid-template-columns: repeat(2,1fr); } }
+  @media (min-width: 1200px) { .features-grid { grid-template-columns: repeat(4,1fr); } }
+
+  .feature-card { background: transparent; text-align: center; padding: 24px; }
+  .feature-icon { width: 48px; height: 48px; margin: 0 auto 24px auto; color: #1a1a1a; }
+  .feature-card h4 { font-size: 18px; font-weight: 700; margin-bottom: 12px; color: #1a1a1a; }
+  .feature-card p { color: #666666; font-size: 14px; line-height: 1.6; }
+
+  /* Responsive adjustments */
+  @media (max-width: 1024px) { .featured-image { height: 520px; } .services-container { flex-direction: column; } .services-left, .services-right { width: 100%; } .featured-card { position: relative; left: 0; bottom: 0; margin-top: 20px; } }
+  @media (max-width: 767px) { .hero-title { font-size: 36px; } .services-hero { padding: 60px 16px; min-height: 320px; } .ticker-track { animation-duration: 12s; } .featured-image { height: 360px; } .features-grid { grid-template-columns: 1fr; } }
+
 }
