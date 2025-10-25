@@ -12,7 +12,7 @@ const serviceData = [
     index: 0,
     name: "Weddings",
     href: "/services/weddings",
-    image: "/placeholder.svg",
+    image: "https://cdn.builder.io/api/v1/image/assets%2F2bdfb75c4a42464ea64f680845f3e793%2F2e817c6c6df2436f8b942350c20d40c3",
     desc:
       "Your dream wedding deserves a perfect setting! We create unforgettable moments with elegant décor, seamless coordination, and personalized touches that reflect your unique love story.",
   },
