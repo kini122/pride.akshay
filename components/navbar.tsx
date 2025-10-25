@@ -160,7 +160,7 @@ export function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-gray-900 transition-opacity duration-300 hover:opacity-70"
+            className="md:hidden text-white transition-opacity duration-300 hover:opacity-70"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
