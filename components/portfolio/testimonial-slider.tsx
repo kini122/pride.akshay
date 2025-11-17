@@ -57,7 +57,7 @@ export function TestimonialSlider() {
   }
 
   return (
-    <section className="py-20 px-4 bg-gray-50">
+    <section className="py-20 px-4 testimonial-bg">
       <div className="max-w-4xl mx-auto">
         {/* Heading */}
         <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-16">What Our Clients Say</h2>

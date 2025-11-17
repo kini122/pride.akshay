@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react"
 import Link from "next/link"
 import { CheckCircle2, ChevronRight } from "lucide-react"
+import { FlowButton } from "@/components/ui/flow-button"
 
 interface ServiceTemplateProps {
   title: string
@@ -154,12 +155,9 @@ export function ServiceTemplate({
                     </li>
                   ))}
                 </ul>
-                <Link
-                  href="/contact"
-                  className="block w-full py-3 bg-primary text-white rounded-lg text-center font-semibold hover:bg-accent transition-colors"
-                >
-                  Get Started
-                </Link>
+                <div>
+                  <FlowButton href="/contact" text="Get Started" />
+                </div>
               </div>
             ))}
           </div>
@@ -199,6 +197,7 @@ export function ServiceTemplate({
         <p className="text-lg mb-8 text-white/90">Let's create something extraordinary together</p>
         <Link
           href="/contact"
+          prefetch={false}
           className="inline-block px-8 py-3 bg-white text-primary rounded-lg font-semibold hover:bg-secondary transition-colors"
         >
           Contact Us Today

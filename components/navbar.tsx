@@ -4,6 +4,8 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Menu, X, ChevronDown } from "lucide-react"
+import { ShinyButton } from "@/components/ui/shiny-button"
+import { HoverButton } from "@/components/ui/hover-button"
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -21,11 +23,11 @@ export function Navbar() {
   }, [])
 
   const services = [
+    { name: "All Services", href: "/services" },
     { name: "Corporate Events", href: "/services/corporate" },
     { name: "Promotions", href: "/services/promotions" },
     { name: "Exhibitions", href: "/services/exhibitions" },
     { name: "Private Parties", href: "/services/private-parties" },
-    { name: "Weddings", href: "/services/weddings" },
   ]
 
   const isActive = (href: string) => pathname === href
@@ -57,6 +59,7 @@ export function Navbar() {
               <li>
                 <Link
                   href="/"
+                  prefetch={false}
                   className={`transition-all duration-300 relative pb-1 ${
                     isActive("/")
                       ? "text-white after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-white"
@@ -69,6 +72,7 @@ export function Navbar() {
               <li>
                 <Link
                   href="/about"
+                  prefetch={false}
                   className={`transition-all duration-300 relative pb-1 ${
                     isActive("/about")
                       ? "text-white after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-white"
@@ -96,6 +100,7 @@ export function Navbar() {
                     <Link
                       key={service.href}
                       href={service.href}
+                      prefetch={false}
                       className="block px-5 py-2.5 text-white/80 hover:text-white hover:bg-white/10 transition-all duration-200 text-sm font-medium"
                     >
                       {service.name}
@@ -107,6 +112,7 @@ export function Navbar() {
               <li>
                 <Link
                   href="/gallery"
+                  prefetch={false}
                   className={`transition-all duration-300 relative pb-1 ${
                     isActive("/gallery")
                       ? "text-white after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-white"
@@ -119,6 +125,7 @@ export function Navbar() {
               <li>
                 <Link
                   href="/clients"
+                  prefetch={false}
                   className={`transition-all duration-300 relative pb-1 ${
                     isActive("/clients")
                       ? "text-white after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-white"
@@ -131,6 +138,7 @@ export function Navbar() {
               <li>
                 <Link
                   href="/contact"
+                  prefetch={false}
                   className={`transition-all duration-300 relative pb-1 ${
                     isActive("/contact")
                       ? "text-white after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-white"
@@ -144,12 +152,11 @@ export function Navbar() {
           </nav>
 
           {/* CTA Button */}
-          <Link
-            href="/contact"
-            className="hidden sm:inline-block rounded-full border-2 border-white px-8 py-2.5 text-[14px] font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#2c3e50] hover:shadow-lg"
-          >
-            Let&apos;s work together
-          </Link>
+          <div className="hidden sm:inline-block navbar-cta-wrapper">
+            <HoverButton className="px-2 py-1 bg-transparent border-none text-white" onClick={() => window.location.href = '/contact'}>
+              Let&apos;s work together
+            </HoverButton>
+          </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -163,10 +170,10 @@ export function Navbar() {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden pb-4 border-t border-white/10 bg-[rgba(44,62,80,0.95)]">
-            <Link href="/" className="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 transition-colors text-sm font-medium">
+            <Link href="/" prefetch={false} className="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 transition-colors text-sm font-medium">
               Home
             </Link>
-            <Link href="/about" className="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 transition-colors text-sm font-medium">
+            <Link href="/about" prefetch={false} className="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 transition-colors text-sm font-medium">
               About
             </Link>
             <button
@@ -189,13 +196,13 @@ export function Navbar() {
                 ))}
               </div>
             )}
-            <Link href="/gallery" className="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 transition-colors text-sm font-medium">
+            <Link href="/gallery" prefetch={false} className="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 transition-colors text-sm font-medium">
               Portfolio
             </Link>
-            <Link href="/clients" className="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 transition-colors text-sm font-medium">
+            <Link href="/clients" prefetch={false} className="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 transition-colors text-sm font-medium">
               Our Clients
             </Link>
-            <Link href="/contact" className="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 transition-colors text-sm font-medium">
+            <Link href="/contact" prefetch={false} className="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 transition-colors text-sm font-medium">
               Contact
             </Link>
           </div>

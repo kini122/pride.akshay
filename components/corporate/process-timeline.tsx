@@ -80,8 +80,8 @@ export function ProcessTimeline() {
                   >
                     {/* Circle Node */}
                     <div className="flex justify-center mb-6">
-                      <div className="w-24 h-24 rounded-full bg-white border-4 border-primary flex items-center justify-center shadow-lg">
-                        <Icon className="w-10 h-10 text-primary" />
+                      <div className="w-24 h-24 rounded-full bg-white border-4 border-primary flex items-center justify-center shadow-lg process-circle">
+                        <Icon className="w-10 h-10 text-primary relative z-10" />
                       </div>
                     </div>
 
@@ -110,8 +110,8 @@ export function ProcessTimeline() {
                 }}
               >
                 <div className="flex flex-col items-center">
-                  <div className="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center flex-shrink-0">
-                    <Icon className="w-8 h-8" />
+                  <div className="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center flex-shrink-0 process-circle">
+                    <Icon className="w-8 h-8 relative z-10" />
                   </div>
                   {index < steps.length - 1 && <div className="w-1 h-12 bg-primary mt-2" />}
                 </div>

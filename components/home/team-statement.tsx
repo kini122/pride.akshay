@@ -1,5 +1,9 @@
 "use client"
 
+import dynamic from "next/dynamic"
+
+const DynamicScroller = dynamic(() => import("./infinite-image-scroller").then((mod) => mod.InfiniteImageScroller), { ssr: false })
+
 export function TeamStatement() {
   return (
     <section className="py-20 bg-white">
@@ -23,17 +27,11 @@ export function TeamStatement() {
           </div>
 
           {/* Right Column - Images */}
-          <div className="grid grid-cols-2 gap-4">
-            <img
-              src="/santa-party-decoration-event.jpg"
-              alt="Party decoration"
-              className="w-full h-64 object-cover rounded-lg shadow-lg"
-            />
-            <img
-              src="/exhibition-trade-show-atomfrost.jpg"
-              alt="Exhibition"
-              className="w-full h-64 object-cover rounded-lg shadow-lg"
-            />
+          <div className="flex items-center justify-center">
+            {/* Infinite horizontal image scroller with arrows */}
+            <div className="w-full max-w-2xl">
+              <DynamicScroller />
+            </div>
           </div>
         </div>
       </div>

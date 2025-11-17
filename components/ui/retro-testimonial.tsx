@@ -122,22 +122,17 @@ const Carousel = ({ items, initialScroll = 0 }: iCarouselProps) => {
   return (
     <div className="relative w-full mt-10">
       <div
-        className="flex w-full overflow-x-scroll overscroll-x-auto scroll-smooth [scrollbar-width:none] py-5"
+        className="flex w-full overflow-x-scroll overscroll-x-auto scroll-smooth [scrollbar-width:none] py-5 justify-start items-start"
         ref={carouselRef}
         onScroll={checkScrollability}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <div
-          className={cn(
-            "absolute right-0 z-[1000] h-auto w-[5%] overflow-hidden bg-gradient-to-l",
-          )}
-        />
 
         <div
           className={cn(
-            "flex flex-row justify-start gap-4 pl-3",
-            "max-w-5xl mx-auto",
+            "flex flex-row justify-start gap-4 pl-0",
+            "w-full",
           )}
         >
           {items.map((item, index) => {
@@ -154,7 +149,7 @@ const Carousel = ({ items, initialScroll = 0 }: iCarouselProps) => {
                   },
                 }}
                 key={`card-${index}`}
-                className="last:pr-[5%] md:last:pr-[33%] rounded-3xl"
+                className="last:pr-0 md:last:pr-0 rounded-3xl"
               >
                 {React.cloneElement(item, {
                   onCardClose: () => {

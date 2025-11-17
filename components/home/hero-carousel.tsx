@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import { FlowButton } from "@/components/ui/flow-button"
 
 const heroImages = ["/luxury-event-party-celebration.jpg", "/elegant-event-venue-decoration.jpg", "/premium-party-atmosphere.jpg"]
 
@@ -53,12 +54,15 @@ export function HeroCarousel() {
           className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up"
           style={{ animationDelay: "0.4s" }}
         >
-          <button className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-black transition-all duration-300">
-            Learn More
-          </button>
-          <button className="px-8 py-4 bg-primary text-white rounded-lg font-semibold hover:bg-accent transition-all duration-300">
-            Get Started
-          </button>
+          {/* Learn More */}
+          <div className="group">
+            <FlowButton text="Learn More" />
+          </div>
+
+          {/* Get Started */}
+          <div className="group">
+            <FlowButton text="Get Started" />
+          </div>
         </div>
       </div>
 

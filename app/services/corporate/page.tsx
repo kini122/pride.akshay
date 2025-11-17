@@ -13,7 +13,6 @@ import { ProcessTimeline } from "@/components/corporate/process-timeline"
 import { CaseStudies } from "@/components/corporate/case-studies"
 import { CapabilitiesGrid } from "@/components/corporate/capabilities-grid"
 import { ClientTestimonials } from "@/components/corporate/client-testimonials"
-import { PricingPackages } from "@/components/corporate/pricing-packages"
 import { FAQSection } from "@/components/corporate/faq-section"
 import { StatisticsSection } from "@/components/corporate/statistics-section"
 import { RelatedServices } from "@/components/corporate/related-services"
@@ -52,7 +51,6 @@ export default function CorporateEventsPage() {
       <CaseStudies />
       <CapabilitiesGrid />
       <ClientTestimonials />
-      <PricingPackages />
       <FAQSection />
       <StatisticsSection />
       <RelatedServices />

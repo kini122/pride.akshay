@@ -6,7 +6,7 @@ export function CTABanner() {
   return (
     <section className="relative py-20 px-4 bg-gradient-to-r from-primary to-orange-500 overflow-hidden">
       {/* Animated Background Elements */}
-      <div className="absolute inset-0 opacity-10">
+      <div className="absolute inset-0 opacity-10 cta-overlay">
         <div className="absolute top-10 left-10 w-32 h-32 bg-white rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-10 right-10 w-40 h-40 bg-white rounded-full blur-3xl animate-pulse delay-1000" />
       </div>

@@ -321,8 +321,8 @@ export function PortfolioGrid({ filter = "all" }: PortfolioGridProps) {
             {filteredItems.slice(0, displayedItems).map((item, index) => (
               <div
                 key={item.id}
-                className="group relative overflow-hidden rounded-lg aspect-video cursor-pointer animate-fade-in-up"
-                style={{ animationDelay: `${index * 50}ms` }}
+                className="group relative overflow-hidden rounded-lg aspect-video cursor-pointer animate-fade-in-up portfolio-item"
+                style={{ ['--portfolio-delay']: `${index * 50}ms` }}
                 onClick={() => setSelectedItem(item)}
               >
                 {/* Image */}
@@ -333,7 +333,7 @@ export function PortfolioGrid({ filter = "all" }: PortfolioGridProps) {
                 />
 
                 {/* Dark Overlay */}
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/70 transition-colors duration-300" />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/70 transition-colors duration-300 portfolio-overlay" />
 
                 {/* Content - Slides up on Hover */}
                 <div className="absolute inset-0 flex flex-col items-end justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
