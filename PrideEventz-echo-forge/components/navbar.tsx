@@ -1,0 +1,218 @@
+"use client"
+
+import { useState, useEffect } from "react"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
+import { Menu, X, ChevronDown } from "lucide-react"
+
+const SERVICES = [
+  { name: "Corporate Events", href: "/services/corporate-events" },
+  { name: "Destination Weddings", href: "/services/destination-weddings" },
+  { name: "Concerts", href: "/services/concerts" },
+  { name: "Conferences & MICE", href: "/services/conferences-mice" },
+  { name: "Exhibitions", href: "/services/exhibitions" },
+  { name: "Brand Activation", href: "/services/brand-activation" },
+  { name: "Rural Marketing", href: "/services/rural-marketing" },
+]
+
+export function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isServicesOpen, setIsServicesOpen] = useState(false)
+  const pathname = usePathname()
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = "unset"
+    }
+    return () => {
+      document.body.style.overflow = "unset"
+    }
+  }, [isMobileMenuOpen])
+
+  const isActive = (href: string) => pathname === href
+
+  const isServicesActive = pathname?.startsWith("/services")
+
+  return (
+    <nav
+      className={`fixed top-0 w-full z-50 transition-all duration-300 backdrop-blur-md border-b ${isScrolled
+          ? "bg-background/80 border-border/50"
+          : "bg-background/80 border-border/40"
+        }`}
+    >
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex h-16 items-center justify-between">
+          {/* Logo */}
+          <Link href="/" className="flex items-center gap-3 text-white hover:opacity-80 transition-opacity">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F6241002a28724d6b8f1149d981f5257e%2F4220e3e82a1f46b3b96e9daf8656a8a6?format=webp&width=800"
+              alt="Pride Eventz Logo"
+              className="h-10 w-10 object-contain"
+            />
+            <span className="hidden sm:inline text-[17px] font-semibold tracking-tight text-white">Pride Eventz</span>
+          </Link>
+
+          {/* Desktop Menu */}
+          <nav className="hidden md:flex items-center" aria-label="Primary">
+            <ul className="flex items-center gap-10 text-[15px] font-medium text-white/80">
+              <li>
+                <Link
+                  href="/"
+                  className={`transition-all duration-300 relative pb-1 ${isActive("/")
+                      ? "text-white after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-background"
+                      : "hover:text-white after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-background hover:after:w-full after:transition-all after:duration-300"
+                    }`}
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/about"
+                  className={`transition-all duration-300 relative pb-1 ${isActive("/about")
+                      ? "text-white after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-background"
+                      : "hover:text-white after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-background hover:after:w-full after:transition-all after:duration-300"
+                    }`}
+                >
+                  About
+                </Link>
+              </li>
+
+              {/* Services Dropdown */}
+              <li className="relative group">
+                <Link
+                  href="/services"
+                  className={`flex items-center gap-1.5 transition-all duration-300 relative pb-1 ${isServicesActive
+                      ? "text-white after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-background"
+                      : "text-white/80 hover:text-white after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-background hover:after:w-full after:transition-all after:duration-300"
+                    }`}
+                >
+                  <span>Services</span>
+                  <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
+                </Link>
+                <div className="absolute left-0 mt-4 w-56 rounded-md backdrop-blur-md bg-background/95 border border-border/40 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-3 shadow-none border border-border/50-2xl">
+                  {SERVICES.map((service) => (
+                    <Link
+                      key={service.href}
+                      href={service.href}
+                      className="block px-5 py-2.5 text-white/80 hover:text-white hover:bg-background/10 transition-all duration-200 text-sm font-medium"
+                    >
+                      {service.name}
+                    </Link>
+                  ))}
+                </div>
+              </li>
+
+              <li>
+                <Link
+                  href="/portfolio"
+                  className={`transition-all duration-300 relative pb-1 ${isActive("/portfolio")
+                      ? "text-white after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-background"
+                      : "hover:text-white after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-background hover:after:w-full after:transition-all after:duration-300"
+                    }`}
+                >
+                  Portfolio
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/clients"
+                  className={`transition-all duration-300 relative pb-1 ${isActive("/clients")
+                      ? "text-white after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-background"
+                      : "hover:text-white after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-background hover:after:w-full after:transition-all after:duration-300"
+                    }`}
+                >
+                  Our Clients
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className={`transition-all duration-300 relative pb-1 ${isActive("/contact")
+                      ? "text-white after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-background"
+                      : "hover:text-white after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-background hover:after:w-full after:transition-all after:duration-300"
+                    }`}
+                >
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </nav>
+
+          {/* CTA Button */}
+          <Link
+            href="/contact"
+            className="hidden sm:inline-block rounded-md border-2 border-white px-8 py-2.5 text-[14px] font-medium text-white transition-all duration-300 hover:bg-background hover:text-foreground hover:border-primary/50-none border border-border/50"
+          >
+            Let&apos;s work together
+          </Link>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden text-white transition-opacity duration-300 hover:opacity-70"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden pb-4 border-t border-border/40 bg-background/95">
+            <Link href="/" className="block px-4 py-3 text-white/80 hover:text-white hover:bg-background/10 transition-colors text-sm font-medium">
+              Home
+            </Link>
+            <Link href="/about" className="block px-4 py-3 text-white/80 hover:text-white hover:bg-background/10 transition-colors text-sm font-medium">
+              About
+            </Link>
+            <div className="flex items-center w-full text-white/80 hover:text-white hover:bg-background/10 transition-colors">
+              <Link href="/services" className="flex-1 px-4 py-3 font-medium text-sm">
+                Services
+              </Link>
+              <button
+                onClick={() => setIsServicesOpen(!isServicesOpen)}
+                className="p-3 pr-4"
+              >
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isServicesOpen ? "rotate-180" : ""}`} />
+              </button>
+            </div>
+            {isServicesOpen && (
+              <div className="pl-4 bg-background/5">
+                {SERVICES.map((service) => (
+                  <Link
+                    key={service.href}
+                    href={service.href}
+                    className="block px-4 py-2.5 text-sm text-white/70 hover:text-white hover:bg-background/10 transition-colors font-medium"
+                  >
+                    {service.name}
+                  </Link>
+                ))}
+              </div>
+            )}
+            <Link href="/portfolio" className="block px-4 py-3 text-white/80 hover:text-white hover:bg-background/10 transition-colors text-sm font-medium">
+              Portfolio
+            </Link>
+            <Link href="/clients" className="block px-4 py-3 text-white/80 hover:text-white hover:bg-background/10 transition-colors text-sm font-medium">
+              Our Clients
+            </Link>
+            <Link href="/contact" className="block px-4 py-3 text-white/80 hover:text-white hover:bg-background/10 transition-colors text-sm font-medium">
+              Contact
+            </Link>
+          </div>
+        )}
+      </div>
+    </nav>
+  )
+}
