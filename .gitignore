@@ -25,3 +25,18 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# agent / tooling files
+.agents/
+skills-lock.json
+
+# local utility scripts (not needed in production)
+organize_assets.ps1
+fix_clients_visibility.py
+fix_visibility.py
+gen_seo.py
+gen_services.py
+gen_services_premium.py
+ultimate_ui_cleanup.py
+update_portfolio.py
+_review_before_delete/
